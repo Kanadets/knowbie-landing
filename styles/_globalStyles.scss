@@ -1,4 +1,4 @@
-@import  "fonts", "colors";
+@import "fonts", "colors";
 
 body {
   margin: 0;
@@ -8,4 +8,5 @@ body {
   font-family: $main-font-family;
   background-color: $main-bg-color;
   padding-top: 43px;
+  overflow-x: hidden;
 }

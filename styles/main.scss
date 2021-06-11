@@ -57,6 +57,8 @@ nav {
       padding: 14px 14px;
       border: none;
       border-radius: 9999px;
+      box-shadow: 0px 1.41814px 4.96349px -1.06361px rgba(194, 241, 183, 0.4),
+        0px 3px 4px -0.70907px rgba(194, 241, 183, 0.1);
     }
   }
 }
@@ -126,6 +128,8 @@ header {
         border-radius: 9999px;
         margin-left: 6px;
         cursor: pointer;
+        box-shadow: 0px 1.64152px 5.74533px -1.23114px rgba(239, 172, 0, 0.4),
+          0px 3px 4px -0.820762px rgba(239, 172, 0, 0.1);
       }
     }
 
@@ -361,6 +365,7 @@ header {
           font-size: 18px;
           border: none;
           border-radius: 9999px;
+          width: 50%;
 
           &::placeholder {
             font-family: $secondary-font-family;
@@ -523,6 +528,260 @@ header {
         border-radius: 9999px;
         margin-left: -1em;
       }
+    }
+  }
+}
+
+// Join waitlist
+.join-waitlist-section {
+  width: 100%;
+  background-color: rgba(194, 241, 183, 0.4);
+  position: relative;
+  text-align: center;
+  padding: 94px 0;
+
+  .join-waitlist-div {
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+    width: 48%;
+
+    & h3 {
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 40px;
+      color: $primary-text-color;
+      margin-bottom: 56px;
+
+      & span {
+        color: $pastel-green-color;
+      }
+    }
+
+    & p {
+      font-size: 24px;
+      line-height: 40px;
+      color: $secondary-text-color;
+    }
+
+    & input {
+      background-color: $white-bg-color;
+      border: none;
+      border-radius: 9999px;
+      font-size: 20px;
+      line-height: 25px;
+      padding: 15px 30px;
+      width: 50%;
+    }
+
+    & button {
+      background-color: $mint-bg-color;
+      color: $primary-text-color;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 25px;
+      border: none;
+      border-radius: 9999px;
+      padding: 15px 35px;
+    }
+
+    & img {
+      position: absolute;
+      left: 0;
+      bottom: -50%;
+    }
+  }
+}
+
+.show-phone-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 367px;
+
+  .three-phones {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    #phone1 {
+      position: absolute;
+      top: -100px;
+      z-index: 5;
+      right: 25%;
+    }
+
+    #phone2 {
+      z-index: 1000;
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      text-align: center;
+      top: -100px;
+    }
+
+    #phone3 {
+      position: absolute;
+      z-index: 5;
+      left: 25%;
+      top: -100px;
+    }
+
+    #show-phone-dec {
+      position: absolute;
+      z-index: 10001;
+      right: 80px;
+      bottom: -650px;
+    }
+  }
+}
+
+.why-knowbie-clients-reviews {
+  width: 100%;
+  margin-top: 252px;
+
+  .why-knowbie-clients-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    & h2 {
+      color: $persimmon-color;
+      font-size: 45px;
+      line-height: 56px;
+      letter-spacing: 2.5px;
+      font-weight: 700;
+      background: linear-gradient(
+        270deg,
+        rgba(255, 228, 223, 0) 2.16%,
+        #ffe4df 36.3%,
+        #ffe4df 61.91%,
+        rgba(255, 228, 223, 0) 100%
+      );
+      margin-bottom: 31px;
+    }
+
+    & h3 {
+      margin-top: 0;
+      margin-bottom: 22px;
+      color: $primary-text-color;
+      font-size: 32px;
+      line-height: 40px;
+      letter-spacing: 0.02em;
+      position: relative;
+
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        width: 31px;
+        height: 2px;
+        background-color: $persimmon-color;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        bottom: -8px;
+        text-align: center;
+      }
+    }
+
+    & p {
+      color: $secondary-text-color;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 100;
+    }
+  }
+
+  .reviews-container {
+    margin-top: 132px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    .review-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0px 30px;
+      background-color: $white-bg-color;
+      margin: 0 30px;
+      width: 746px;
+      height: 378px;
+      border-radius: 27px;
+      text-align: center;
+
+      & p {
+        font-size: 20.3261px;
+        line-height: 38px;
+        color: $secondary-text-color;
+      }
+
+      & #full-name {
+        font-weight: bold;
+        font-size: 24.7234px;
+        line-height: 31px;
+        color: $primary-text-color;
+      }
+
+      & #position {
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 21px;
+        color: $primary-text-color;
+      }
+    }
+
+    .review-container-active {
+      padding: 0 90px;
+      box-shadow: 0px 4px 4px -6px rgba(0, 0, 0, 0.12);
+      position: relative;
+
+      #prev {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: -50px;
+        bottom: 0;
+      }
+
+      #next {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        right: -50px;
+      }
+
+      #user-photo {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        left: 0;
+      }
+    }
+
+    .prev-review {
+      position: absolute;
+      left: -50%;
+      bottom: -20px;
+    }
+
+    .next-review {
+      position: absolute;
+      right: -50%;
+      bottom: -20px;
     }
   }
 }

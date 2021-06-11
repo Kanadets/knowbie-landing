@@ -756,14 +756,14 @@ header .header-image img {
 .show-phone-section .three-phones {
   position: relative;
   height: 100%;
-  width: 50%;
+  width: 342px;
 }
 
 .show-phone-section .three-phones #phone1 {
   position: absolute;
-  top: -100px;
+  top: -88px;
   z-index: 5;
-  right: 25%;
+  right: -15px;
 }
 
 .show-phone-section .three-phones #phone2 {
@@ -780,15 +780,15 @@ header .header-image img {
 .show-phone-section .three-phones #phone3 {
   position: absolute;
   z-index: 5;
-  left: 25%;
-  top: -100px;
+  left: 47px;
+  top: -88px;
 }
 
 .show-phone-section .three-phones #show-phone-dec {
   position: absolute;
   z-index: 10001;
-  right: 80px;
-  bottom: -650px;
+  left: 400px;
+  bottom: -640px;
 }
 
 .why-knowbie-clients-reviews {
@@ -870,8 +870,7 @@ header .header-image img {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: inherit;
 }
 
 .why-knowbie-clients-reviews .reviews-container .review-container {
@@ -888,11 +887,10 @@ header .header-image img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0px 30px;
   background-color: #ffffff;
   margin: 0 30px;
-  width: 746px;
-  height: 378px;
+  width: 50%;
+  padding: 127px 90px 30px 60px;
   border-radius: 27px;
   text-align: center;
 }
@@ -908,6 +906,7 @@ header .header-image img {
   font-size: 24.7234px;
   line-height: 31px;
   color: #2e1a47;
+  margin-top: 50px;
 }
 
 .why-knowbie-clients-reviews .reviews-container .review-container #position {
@@ -921,6 +920,9 @@ header .header-image img {
   padding: 0 90px;
   -webkit-box-shadow: 0px 4px 4px -6px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 4px 4px -6px rgba(0, 0, 0, 0.12);
+  position: relative;
+  padding: 127px 90px 30px 90px;
+  z-index: 10;
   position: relative;
 }
 
@@ -943,20 +945,300 @@ header .header-image img {
 .why-knowbie-clients-reviews .reviews-container .review-container-active #user-photo {
   position: absolute;
   margin: auto;
-  top: 0;
+  top: -50px;
   right: 0;
   left: 0;
+  background-color: #f56c55;
+  width: 96.4px;
+  height: 96.4px;
+  border-radius: 9999px;
+}
+
+.why-knowbie-clients-reviews .reviews-container .review-container-active #user-photo #user-photo-in {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 100;
+}
+
+.why-knowbie-clients-reviews .reviews-container .review-container-active #user-photo #user-photo-in #user-photo-dec-1 {
+  position: absolute;
+  left: -55px;
+  top: -10px;
+}
+
+.why-knowbie-clients-reviews .reviews-container .review-container-active #user-photo #user-photo-in #user-photo-dec-2 {
+  position: absolute;
+  right: -55px;
+  z-index: -2;
+  top: -13px;
+}
+
+.why-knowbie-clients-reviews .reviews-container .review-container-active #user-photo #user-photo-in img {
+  width: 64.74px;
+  height: 82.08px;
 }
 
 .why-knowbie-clients-reviews .reviews-container .prev-review {
   position: absolute;
-  left: -50%;
-  bottom: -20px;
+  left: -700px;
+  bottom: -40px;
 }
 
 .why-knowbie-clients-reviews .reviews-container .next-review {
   position: absolute;
-  right: -50%;
-  bottom: -20px;
+  right: -700px;
+  bottom: -40px;
+}
+
+.contact-us-section {
+  margin-top: 266px;
+  background-color: #eaeaf6;
+  width: 100%;
+  padding: 140px 147px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact-us-section .contact-us-container {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact-us-section .contact-us-container .contact-us-text-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact-us-section .contact-us-container .contact-us-text-info .contact-us-text h2 {
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 46px;
+  color: #2e1a47;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.contact-us-section .contact-us-container .contact-us-text-info .contact-us-text h2::before {
+  display: block;
+  content: "";
+  width: 31px;
+  height: 2px;
+  background: #b1b2dd;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.contact-us-section .contact-us-container .contact-us-text-info .contact-us-text h2 span {
+  color: #b1b2dd;
+}
+
+.contact-us-section .contact-us-container .contact-us-text-info .contact-us-text p {
+  font-size: 20px;
+  line-height: 32px;
+  color: #8c8496;
+  width: 330px;
+}
+
+.contact-us-section .contact-us-container .contact-us-text-info .contact-us-text p span {
+  color: #b1b2dd;
+}
+
+.contact-us-section .contact-us-container .contact-us-text-info .contact-us-info {
+  background-color: #ffffff;
+  padding: 80px 42px 50px 35px;
+  -webkit-box-shadow: 0px 14px 27px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 14px 27px rgba(0, 0, 0, 0.07);
+  border-radius: 29.4045px;
+}
+
+.contact-us-section .contact-us-container .contact-us-text-info .contact-us-info h3 {
+  font-size: 34px;
+  line-height: 40px;
+  letter-spacing: -1.53339px;
+  font-family: "Karla", sans-serif;
+  color: #2e1a47;
+}
+
+.contact-us-section .contact-us-container .contact-us-text-info .contact-us-info .contact-info-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+.contact-us-section .contact-us-container .contact-us-text-info .contact-us-info .contact-info-text:last-child {
+  margin-bottom: 0;
+}
+
+.contact-us-section .contact-us-container .contact-us-text-info .contact-us-info .contact-info-text p {
+  margin-left: 20px;
+  font-size: 17.0964px;
+  line-height: 21px;
+  color: #aea9b5;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.contact-us-section .contact-us-container .contact-us-text-info .contact-us-info .contact-info-text #contact-us-time-img {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.contact-us-section .contact-us-container .contact-us-text-info .contact-us-info .contact-info-text #contact-us-time p {
+  text-align: center;
+  margin-top: 0;
+}
+
+.contact-us-section .contact-us-container .contact-us-text-info .contact-us-info .contact-info-text #contact-us-time p:last-child {
+  margin-top: 14px;
+}
+
+.contact-us-section .contact-us-container .contact-us-text-info .contact-us-info .contact-info-text #contact-us-time p span {
+  margin-left: 15px;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 14px 27px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 14px 27px rgba(0, 0, 0, 0.07);
+  border-radius: 29.4045px;
+  padding: 77px 56px 77px 43px;
+  margin-left: 27px;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-container h3 {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 36px;
+  color: #2e1a47;
+  margin-top: 0;
+  margin-bottom: 60px;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-container .contact-us-form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  row-gap: 34px;
+  -webkit-column-gap: 24px;
+          column-gap: 24px;
+  margin-bottom: 60px;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-container .contact-us-form input {
+  background: rgba(234, 234, 246, 0.75);
+  border-radius: 29.4045px;
+  font-size: 17px;
+  line-height: 21px;
+  border: none;
+  padding: 15px 20px;
+  color: #8c8496;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-container .contact-us-form input::-webkit-input-placeholder {
+  color: #8c8496, 70%;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-container .contact-us-form input:-ms-input-placeholder {
+  color: #8c8496, 70%;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-container .contact-us-form input::-ms-input-placeholder {
+  color: #8c8496, 70%;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-container .contact-us-form input::placeholder {
+  color: #8c8496, 70%;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-container .contact-us-form select {
+  background: rgba(234, 234, 246, 0.75);
+  border-radius: 29.4045px;
+  font-size: 17px;
+  line-height: 21px;
+  border: none;
+  padding: 15px 20px;
+  color: #8c8496;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("../assets/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 50%;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-container textarea {
+  margin-bottom: 70px;
+  height: 126.4px;
+  background: rgba(234, 234, 246, 0.75);
+  border-radius: 29.4045px;
+  font-size: 17px;
+  line-height: 21px;
+  border: none;
+  padding: 15px 20px;
+  color: #8c8496;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-container button {
+  width: 196.5px;
+  background-color: #b1b2dd;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 34px;
+  border: none;
+  border-radius: 9999px;
+  padding: 16px 0;
 }
 /*# sourceMappingURL=main.css.map */

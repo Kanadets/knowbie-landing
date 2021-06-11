@@ -890,7 +890,7 @@ header .header-image img {
   background-color: #ffffff;
   margin: 0 30px;
   width: 50%;
-  padding: 127px 90px 30px 60px;
+  padding: 126px 90px 60px 140px;
   border-radius: 27px;
   text-align: center;
 }
@@ -990,13 +990,13 @@ header .header-image img {
 
 .why-knowbie-clients-reviews .reviews-container .prev-review {
   position: absolute;
-  left: -700px;
+  left: -55%;
   bottom: -40px;
 }
 
 .why-knowbie-clients-reviews .reviews-container .next-review {
   position: absolute;
-  right: -700px;
+  right: -55%;
   bottom: -40px;
 }
 
@@ -1025,9 +1025,6 @@ header .header-image img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .contact-us-section .contact-us-container .contact-us-text-info {
@@ -1092,6 +1089,7 @@ header .header-image img {
   letter-spacing: -1.53339px;
   font-family: "Karla", sans-serif;
   color: #2e1a47;
+  margin-top: 0;
 }
 
 .contact-us-section .contact-us-container .contact-us-text-info .contact-us-info .contact-info-text {

@@ -716,7 +716,7 @@ header {
       background-color: $white-bg-color;
       margin: 0 30px;
       width: 50%;
-      padding: 127px 90px 30px 60px;
+      padding: 126px 90px 60px 140px;
       // height: 378px;
       border-radius: 27px;
       text-align: center;
@@ -810,13 +810,13 @@ header {
 
     .prev-review {
       position: absolute;
-      left: -700px;
+      left: -55%;
       bottom: -40px;
     }
 
     .next-review {
       position: absolute;
-      right: -700px;
+      right: -55%;
       bottom: -40px;
     }
   }
@@ -836,7 +836,6 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    justify-content: space-between;
 
     .contact-us-text-info {
       display: flex;
@@ -892,6 +891,7 @@ header {
           letter-spacing: -1.53339px;
           font-family: $secondary-font-family;
           color: $primary-text-color;
+          margin-top: 0;
         }
 
         .contact-info-text {

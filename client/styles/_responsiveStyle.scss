@@ -1,0 +1,450 @@
+@import "colors";
+
+@media (max-width: 1025px) {
+  nav {
+    .nav-links-button {
+      .nav-links-burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        list-style: none;
+        margin: 0;
+        height: 16px;
+        width: 20px;
+
+        .burger-menu {
+          background-color: $primary-text-color;
+          height: 2px;
+          width: 100%;
+          opacity: 60%;
+          border-radius: 999px;
+        }
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    button {
+      display: none;
+    }
+  }
+
+  header {
+    height: 45vh;
+    width: 85%;
+    justify-content: space-between;
+
+    .header-text {
+      & h1 {
+        font-size: 39.7149px;
+        line-height: 48px;
+        letter-spacing: -1.9353px;
+      }
+
+      & p {
+        font-size: 600;
+        font-size: 16px;
+      }
+
+      .header-email {
+        & input {
+          width: 50%;
+          font-size: 14px;
+          padding: 14px 12px;
+          &::placeholder {
+            font-size: 14px;
+          }
+        }
+
+        & button {
+          padding: 14px 24px;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .header-image {
+      & img {
+        width: 607px;
+        height: 438.04px;
+        display: block;
+        margin-right: -100px;
+      }
+    }
+  }
+
+  .why-knowbie-section {
+    margin-top: 120px;
+
+    .why-knowbie-intro-text {
+      & h2 {
+        width: 40%;
+        font-size: 45px;
+      }
+    }
+  }
+
+  .for-restaurants-section {
+    margin-top: 170px;
+    flex-direction: column;
+    align-items: center;
+
+    .for-restaurants-intro {
+      flex-direction: column;
+      align-items: center;
+
+      .for-restaurants-intro-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        & img {
+          width: 100%;
+          margin-right: -200px;
+        }
+      }
+
+      .for-restaurants-intro-text {
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & h3 {
+          &::before {
+            display: block;
+            content: "";
+            width: 31px;
+            height: 2px;
+            background: $web-orange-color;
+            position: absolute;
+            bottom: -15px;
+            margin: auto;
+            right: 0;
+            left: 0;
+          }
+        }
+
+        .for-restaurants-intro-email {
+          display: flex;
+          justify-content: center;
+        }
+
+        & button {
+          margin-left: 8px;
+        }
+      }
+    }
+
+    .for-restaurants-tools {
+      margin-top: 140px;
+
+      .for-restaurants-tools-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        margin-left: -80px;
+        margin-right: 17px;
+
+        #dec-for-restaurants {
+          position: absolute;
+          bottom: 20px;
+          left: 120px;
+        }
+      }
+
+      .for-restaurants-tools-right {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        #dec-for-restaurants-tools {
+          position: absolute;
+          right: 150px;
+          top: 15%;
+          z-index: 2;
+        }
+
+        & h2 {
+          width: 100%;
+          line-height: 50px;
+          font-size: 38px;
+        }
+      }
+    }
+  }
+
+  .for-servers-section {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    margin-top: 240px;
+
+    .for-servers-img img {
+      width: 700px;
+    }
+
+    .for-servers-text {
+      width: 90%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & h2 {
+        width: 50%;
+      }
+
+      #for-servers-span {
+        &::before {
+          bottom: 30px;
+          margin: auto;
+          right: 0;
+          left: 0;
+        }
+      }
+
+      & ul {
+        text-align: left;
+
+        & li {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+
+  .join-waitlist-section {
+    padding: 50px 0;
+
+    .join-waitlist-div {
+      width: 65%;
+
+      & h3 {
+        margin-bottom: 40px;
+        margin-top: 0;
+      }
+
+      & p {
+        font-size: 22px;
+        margin-bottom: 25px;
+      }
+
+      & input {
+        font-size: 18px;
+        padding: 10px 20px;
+      }
+
+      & button {
+        font-weight: 400;
+        font-size: 18px;
+        padding: 10px 20px;
+      }
+
+      & img {
+        left: -150px;
+      }
+    }
+  }
+
+  .show-phone-section {
+    justify-content: center;
+    margin-top: 250px;
+
+    #left-phone {
+      display: none;
+    }
+
+    #right-phone {
+      display: none;
+    }
+
+    .three-phones {
+      position: relative;
+      height: 100%;
+      width: 250px;
+
+      #phone1 {
+        height: 650px;
+        left: -175px;
+        top: -45px;
+      }
+
+      #phone2 {
+        position: relative;
+        height: 700px;
+      }
+
+      #phone3 {
+        height: 650px;
+        left: 25px;
+        top: -45px;
+      }
+
+      #show-phone-dec {
+        position: absolute;
+        z-index: 10001;
+        left: 315px;
+        bottom: 170px;
+      }
+    }
+  }
+
+  .why-knowbie-clients-reviews {
+    margin-top: 100px;
+
+    .why-knowbie-clients-text {
+      & h2 {
+        margin-bottom: 18px;
+      }
+
+      & h3 {
+        margin-bottom: 11px;
+      }
+
+      & p {
+        color: $secondary-text-color;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 100;
+      }
+    }
+
+    .reviews-container {
+      margin-top: 100px;
+
+      .review-container {
+        padding: 53px 32px 60px 32px;
+
+        & p {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 16px;
+        }
+
+        & #full-name {
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 13px;
+          margin-top: 20px;
+        }
+
+        & #position {
+          font-size: 14px;
+          line-height: 9px;
+          margin-top: 5px;
+        }
+      }
+
+      .review-container-active {
+        padding: 53px 32px 15px 32px;
+
+        #user-photo {
+          position: absolute;
+          margin: auto;
+          top: -30px;
+          right: 0;
+          left: 0;
+          background-color: $carnation-color;
+          width: 48.2px;
+          height: 48.2px;
+          border-radius: 9999px;
+
+          #user-photo-in {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 100;
+
+            #user-photo-dec-1 {
+              position: absolute;
+              left: -25px;
+              top: 7px;
+            }
+
+            #user-photo-dec-2 {
+              position: absolute;
+              right: -25px;
+              z-index: -2;
+              top: 3px;
+            }
+
+            & img {
+              width: 27.96px;
+              height: 35.45px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contact-us-section {
+    margin-top: 100px;
+
+    .contact-us-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .contact-us-text-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+        width: 100%;
+
+        .contact-us-text {
+          margin: 0 auto;
+          text-align: center;
+
+          & h2 {
+            &::before {
+              margin: auto;
+              right: 0;
+              left: 0;
+            }
+          }
+
+          & p {
+            width: 80%;
+            margin: 15px auto;
+          }
+        }
+
+        .contact-us-info {
+          background-color: $white-bg-color;
+          padding: 80px 42px 50px 35px;
+          box-shadow: 0px 14px 27px rgba(0, 0, 0, 0.07);
+          border-radius: 29.4045px;
+          width: 80%;
+
+          & h3 {
+            align-self: flex-end;
+            font-size: 34px;
+            line-height: 40px;
+            letter-spacing: -1.53339px;
+            font-family: $secondary-font-family;
+            color: $primary-text-color;
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    .contact-us-form-container {
+      width: 80%;
+    }
+  }
+}

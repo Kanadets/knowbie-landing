@@ -24,6 +24,7 @@ body {
 }
 
 .main-section {
+  margin-top: 142px;
   width: 85%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -48,6 +49,13 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  position: relative;
+}
+
+.main-section .main-section-text-img #fancy-arrow {
+  position: absolute;
+  top: -90px;
+  right: 0;
 }
 
 .main-section .main-section-text-img h2 {
@@ -92,9 +100,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  height: 100%;
   background-color: #ffffff;
   border-radius: 25px;
   padding: 37px 40px 43px 37px;
@@ -108,6 +114,8 @@ body {
   row-gap: 28px;
   -webkit-column-gap: 30px;
           column-gap: 30px;
+  font-size: 11.1561px;
+  line-height: 15px;
 }
 
 .main-section .request-access-form .user-info-form div {
@@ -153,6 +161,209 @@ body {
   z-index: 10;
   -webkit-transition: all ease-in-out 0.3s;
   transition: all ease-in-out 0.3s;
+}
+
+.main-section .request-access-form .radios-inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 36px;
+}
+
+.main-section .request-access-form .radios-inputs fieldset {
+  border: none;
+  font-weight: 700;
+  font-size: 11.5726px;
+  line-height: 15px;
+  color: #2e1a47;
+  margin-bottom: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0;
+}
+
+.main-section .request-access-form .radios-inputs fieldset legend {
+  padding: 0;
+}
+
+.main-section .request-access-form .radios-inputs fieldset div {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 25px;
+}
+
+.main-section .request-access-form .radios-inputs fieldset div span {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  border: 2px solid #2e1a47;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 8px;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+
+.main-section .request-access-form .radios-inputs fieldset div input {
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.main-section .request-access-form .radios-inputs fieldset div input:checked ~ span {
+  background: #2e1a47;
+}
+
+.main-section .request-access-form .radios-inputs fieldset div input:checked ~ span::after {
+  content: "\2713";
+  position: absolute;
+  left: 3px;
+  top: 0;
+  bottom: 5px;
+  right: 5px;
+  font-size: 9px;
+  color: white;
+}
+
+.main-section .request-access-form .last-input {
+  margin-top: 5px;
+  width: 100%;
+}
+
+.main-section .request-access-form .last-input label {
+  margin-bottom: 16px;
+}
+
+.main-section .request-access-form .last-input input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #2e1a47;
+  padding: 7px;
+  font-size: 11.1561px;
+  line-height: 15px;
+  color: #2e1a47;
+  font-weight: 700;
+}
+
+.main-section .request-access-form .last-input input::-webkit-input-placeholder {
+  font-weight: 400;
+  color: #8c8496;
+  opacity: 80%;
+}
+
+.main-section .request-access-form .last-input input:-ms-input-placeholder {
+  font-weight: 400;
+  color: #8c8496;
+  opacity: 80%;
+}
+
+.main-section .request-access-form .last-input input::-ms-input-placeholder {
+  font-weight: 400;
+  color: #8c8496;
+  opacity: 80%;
+}
+
+.main-section .request-access-form .last-input input::placeholder {
+  font-weight: 400;
+  color: #8c8496;
+  opacity: 80%;
+}
+
+.main-section .request-access-form button {
+  margin-top: 40px;
+  font-family: "Karla", sans-serif;
+  font-size: 11.89px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: -0.594502px;
+  color: #2e1a47;
+  font-weight: 700;
+  background-color: #c2f1b7;
+  border: none;
+  border-radius: 9999px;
+  padding: 12px 24px;
+  width: 122px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.partners-logo-section {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 170px;
+  margin-bottom: 120px;
+}
+
+.partners-logo-section span {
+  color: #a9a1a1;
+  font-size: 16.5797px;
+  line-height: 21px;
+  letter-spacing: -0.547957px;
+  position: relative;
+  margin-bottom: 70px;
+}
+
+.partners-logo-section span::before {
+  left: -27px;
+  top: -67px;
+  content: "";
+  position: absolute;
+  width: 391px;
+  height: 2px;
+  background-color: #b6b6b6;
+}
+
+.partners-logo-section div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  row-gap: 85px;
+  -webkit-column-gap: 218px;
+          column-gap: 218px;
+}
+
+.partners-logo-section div img {
+  width: 204.85px;
+  height: 44.46px;
 }
 
 nav {
@@ -285,6 +496,7 @@ header .header-text {
       -ms-flex-pack: start;
           justify-content: flex-start;
   width: 100%;
+  height: 100%;
 }
 
 header .header-text h1 {
@@ -316,6 +528,10 @@ header .header-text .header-email {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 65px;
+  position: relative;
+  opacity: 100%;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 header .header-text .header-email input {
@@ -324,6 +540,10 @@ header .header-text .header-email input {
   border: none;
   border-radius: 9999px;
   width: 55%;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: translate(0);
+          transform: translate(0);
 }
 
 header .header-text .header-email input::-webkit-input-placeholder {
@@ -361,6 +581,94 @@ header .header-text .header-email button {
   cursor: pointer;
   -webkit-box-shadow: 0px 1.64152px 5.74533px -1.23114px rgba(239, 172, 0, 0.4), 0px 3px 4px -0.82076px rgba(239, 172, 0, 0.1);
           box-shadow: 0px 1.64152px 5.74533px -1.23114px rgba(239, 172, 0, 0.4), 0px 3px 4px -0.82076px rgba(239, 172, 0, 0.1);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+
+header .header-text .hidden-email {
+  opacity: 0;
+}
+
+header .header-text .hidden-email input {
+  -webkit-transform: translate(100px);
+          transform: translate(100px);
+  bottom: 0;
+  opacity: 0;
+}
+
+header .header-text .hidden-email button {
+  opacity: 0;
+  -webkit-transform: translate(-100px);
+          transform: translate(-100px);
+}
+
+header .header-text .email-sent {
+  margin-top: 65px;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+header .header-text .email-sent #check-mark {
+  -webkit-transform: translate(185px);
+          transform: translate(185px);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+header .header-text .email-sent #happy-face {
+  -webkit-transform: translate(-185px);
+          transform: translate(-185px);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+header .header-text .email-sent p {
+  font-weight: 500;
+  font-size: 14.9534px;
+  line-height: 19px;
+  letter-spacing: 0.02em;
+  color: #2e1a47;
+  margin-left: 13px;
+}
+
+header .header-text .email-sent-show {
+  opacity: 100%;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+header .header-text .email-sent-show #check-mark {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+header .header-text .email-sent-show #happy-face {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+header .header-text .display-none {
+  display: none;
 }
 
 header .header-text #span-bottom-text {

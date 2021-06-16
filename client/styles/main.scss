@@ -91,6 +91,7 @@ header {
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
+    height: 100%;
 
     & h1 {
       font-weight: 700;
@@ -114,6 +115,9 @@ header {
       flex-direction: row;
       align-items: center;
       margin-top: 65px;
+      position: relative;
+      opacity: 100%;
+      transition: all 0.5s ease-in-out;
 
       & input {
         padding: 18px 16px;
@@ -121,6 +125,8 @@ header {
         border: none;
         border-radius: 9999px;
         width: 55%;
+        transition: all 0.5s ease-in-out;
+        transform: translate(0);
 
         &::placeholder {
           font-family: $secondary-font-family;
@@ -140,7 +146,71 @@ header {
         cursor: pointer;
         box-shadow: 0px 1.64152px 5.74533px -1.23114px rgba(239, 172, 0, 0.4),
           0px 3px 4px -0.820762px rgba(239, 172, 0, 0.1);
+        transition: all 0.5s ease-in-out;
+        transform: translate(0);
       }
+    }
+
+    .hidden-email {
+      opacity: 0;
+      & input {
+        transform: translate(100px);
+        bottom: 0;
+        opacity: 0;
+      }
+
+      & button {
+        opacity: 0;
+        transform: translate(-100px);
+      }
+    }
+
+    .email-sent {
+      margin-top: 65px;
+      opacity: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.5s ease-in-out;
+
+      #check-mark {
+        transform: translate(185px);
+        transition: all 0.5s ease-in-out;
+      }
+
+      #happy-face {
+        transform: translate(-185px);
+        transition: all 0.5s ease-in-out;
+      }
+
+      p {
+        font-weight: 500;
+        font-size: 14.9534px;
+        line-height: 19px;
+        letter-spacing: 0.02em;
+        color: $primary-text-color;
+        margin-left: 13px;
+      }
+    }
+
+    .email-sent-show {
+      opacity: 100%;
+      transition: all 0.5s ease-in-out;
+
+      #check-mark {
+        transform: translate(0);
+        transition: all 0.5s ease-in-out;
+      }
+
+      #happy-face {
+        transform: translate(0);
+        transition: all 0.5s ease-in-out;
+      }
+    }
+
+    .display-none {
+      display: none;
     }
 
     #span-bottom-text {

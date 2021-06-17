@@ -9,7 +9,7 @@
   </head>
   <body>
     <nav>
-      <img src="assets/main-logo.svg" height="55" width="205" />
+      <a href="/"><img src="assets/main-logo.svg" height="55" width="205" /></a>
       <div class="nav-links-button">
         <div class="nav-links-burger">
           <div class="burger-menu"></div>
@@ -177,9 +177,40 @@
               trainings and gives you insight on completed trainings.
             </li>
           </ul>
-          <div class="for-restaurants-intro-email">
-            <input type="email" placeholder="Enter your email  . . ." />
-            <button>Request Access</button>
+          <div
+            class="for-restaurants-intro-email"
+            id="for-restaurants-intro-email-anim"
+          >
+            <div id="for-res-form">
+              <input
+                type="email"
+                id="for-restaurants-input"
+                placeholder="Enter your email  . . ."
+                required
+              />
+              <button id="for-restaurants-btn">Request Access</button>
+            </div>
+            <div
+              class="email-sent"
+              id="for-restaurants-email-sent-anim-for-res"
+            >
+              <img
+                src="assets/check_mark.svg"
+                id="check-mark"
+                alt=""
+                srcset=""
+              />
+              <p>
+                Thank you for being the first to try knowbie.<br />
+                Email insturction sent to your email
+              </p>
+              <img
+                src="assets/happy_face.png"
+                id="happy-face"
+                alt=""
+                srcset=""
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -351,20 +382,61 @@
             </div>
           </div>
         </div>
-        <div class="contact-us-form-container">
-          <h3>
-            Contact
-          </h3>
-          <div class="contact-us-form">
-            <input type="text" name="fullName" placeholder="Full Name" />
-            <input type="email" name="email" placeholder="Email" />
-            <select name="companyType" id="companyType">
-              <option value="" disabled selected>Company Type</option>
-            </select>
-            <input type="text" name="companyName" placeholder="Company Name" />
+        <div class="contact-us-form-wrap">
+          <div class="contact-us-form-container" id="anim-contact-us-container">
+            <h3>
+              Contact
+            </h3>
+            <div class="contact-us-form">
+              <input
+                type="text"
+                name="fullName"
+                placeholder="Full Name"
+                id="fullNameInputContact"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                id="emailInputContact"
+                required
+              />
+              <select name="companyType" id="companyTypeInputContact">
+                <option value="" disabled selected>Company Type</option>
+                <option value="Bar">Bar</option>
+                <option value="Restaurant">Restaurant</option>
+                <option value="Wine store">Wine store</option>
+              </select>
+              <input
+                type="text"
+                name="companyName"
+                placeholder="Company Name"
+                id="companyNameInputContact"
+                required
+              />
+            </div>
+            <textarea
+              type="text"
+              placeholder="Message"
+              id="messageInputContact"
+            ></textarea>
+            <button id="submit-contact-us-btn">Send</button>
           </div>
-          <textarea type="text" placeholder="Message"></textarea>
-          <button>Send</button>
+          <div class="init-contact-us-form-submit" id="anim-contact-us-submit">
+            <h4>
+              Thank you <span>Hussain</span> Your submission has been received!
+            </h4>
+            <div>
+              <img src="assets/big_success.svg" alt="" srcset="" />
+              <span id="form-submitted">Form submitted</span>
+              <span id="form-submitted-text">
+                fermentum dui est. Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Arcu, ipsum lectus urna leo fermentum dui est.
+                Lorem ipsum dolor</span
+              >
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -415,7 +487,6 @@
         </div>
       </div>
     </footer>
-
     <script src="scripts/sripts.js"></script>
   </body>
 </html>

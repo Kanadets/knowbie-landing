@@ -924,6 +924,9 @@ header .header-image img {
 .for-restaurants-section .for-restaurants-intro .for-restaurants-intro-text .for-restaurants-intro-email {
   width: 100%;
   margin-top: 65px;
+  opacity: 100%;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .for-restaurants-section .for-restaurants-intro .for-restaurants-intro-text .for-restaurants-intro-email input {
@@ -933,6 +936,10 @@ header .header-image img {
   border: none;
   border-radius: 9999px;
   width: 50%;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .for-restaurants-section .for-restaurants-intro .for-restaurants-intro-text .for-restaurants-intro-email input::-webkit-input-placeholder {
@@ -965,6 +972,97 @@ header .header-image img {
   line-height: 20px;
   border: none;
   border-radius: 9999px;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.for-restaurants-section .for-restaurants-intro .for-restaurants-intro-text .for-restaurants-intro-email .email-sent {
+  margin-top: 65px;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.for-restaurants-section .for-restaurants-intro .for-restaurants-intro-text .for-restaurants-intro-email .email-sent #check-mark {
+  -webkit-transform: translate(185px);
+          transform: translate(185px);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.for-restaurants-section .for-restaurants-intro .for-restaurants-intro-text .for-restaurants-intro-email .email-sent #happy-face {
+  -webkit-transform: translate(-185px);
+          transform: translate(-185px);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.for-restaurants-section .for-restaurants-intro .for-restaurants-intro-text .for-restaurants-intro-email .email-sent p {
+  font-weight: 500;
+  font-size: 14.9534px;
+  line-height: 19px;
+  letter-spacing: 0.02em;
+  color: #2e1a47;
+  margin-left: 13px;
+}
+
+.for-restaurants-section .for-restaurants-intro .for-restaurants-intro-text .for-restaurants-intro-email .email-sent-show {
+  opacity: 100%;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.for-restaurants-section .for-restaurants-intro .for-restaurants-intro-text .for-restaurants-intro-email .email-sent-show #check-mark {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.for-restaurants-section .for-restaurants-intro .for-restaurants-intro-text .for-restaurants-intro-email .email-sent-show #happy-face {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.for-restaurants-section .for-restaurants-intro .for-restaurants-intro-text .hide-for-restaurants-intro-email div {
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.for-restaurants-section .for-restaurants-intro .for-restaurants-intro-text .hide-for-restaurants-intro-email input {
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.for-restaurants-section .for-restaurants-intro .for-restaurants-intro-text .hide-for-restaurants-intro-email button {
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.for-restaurants-section .for-restaurants-intro .for-restaurants-intro-text .display-none {
+  display: none;
 }
 
 .for-restaurants-section .for-restaurants-tools {
@@ -1594,7 +1692,17 @@ header .header-image img {
   margin-left: 15px;
 }
 
-.contact-us-section .contact-us-container .contact-us-form-container {
+.contact-us-section .contact-us-container .contact-us-form-wrap {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 14px 27px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 14px 27px rgba(0, 0, 0, 0.07);
+  border-radius: 29.4045px;
+  padding: 77px 56px 77px 43px;
+  width: 560px;
+  margin-left: 27px;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-wrap .contact-us-form-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1602,15 +1710,9 @@ header .header-image img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #ffffff;
-  -webkit-box-shadow: 0px 14px 27px rgba(0, 0, 0, 0.07);
-          box-shadow: 0px 14px 27px rgba(0, 0, 0, 0.07);
-  border-radius: 29.4045px;
-  padding: 77px 56px 77px 43px;
-  margin-left: 27px;
 }
 
-.contact-us-section .contact-us-container .contact-us-form-container h3 {
+.contact-us-section .contact-us-container .contact-us-form-wrap .contact-us-form-container h3 {
   font-weight: 700;
   font-size: 34px;
   line-height: 36px;
@@ -1619,7 +1721,7 @@ header .header-image img {
   margin-bottom: 60px;
 }
 
-.contact-us-section .contact-us-container .contact-us-form-container .contact-us-form {
+.contact-us-section .contact-us-container .contact-us-form-wrap .contact-us-form-container .contact-us-form {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -1628,9 +1730,12 @@ header .header-image img {
   -webkit-column-gap: 24px;
           column-gap: 24px;
   margin-bottom: 60px;
+  opacity: 100%;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
-.contact-us-section .contact-us-container .contact-us-form-container .contact-us-form input {
+.contact-us-section .contact-us-container .contact-us-form-wrap .contact-us-form-container .contact-us-form input {
   background: rgba(234, 234, 246, 0.75);
   border-radius: 29.4045px;
   font-size: 17px;
@@ -1640,23 +1745,23 @@ header .header-image img {
   color: #8c8496;
 }
 
-.contact-us-section .contact-us-container .contact-us-form-container .contact-us-form input::-webkit-input-placeholder {
+.contact-us-section .contact-us-container .contact-us-form-wrap .contact-us-form-container .contact-us-form input::-webkit-input-placeholder {
   color: #8c8496, 70%;
 }
 
-.contact-us-section .contact-us-container .contact-us-form-container .contact-us-form input:-ms-input-placeholder {
+.contact-us-section .contact-us-container .contact-us-form-wrap .contact-us-form-container .contact-us-form input:-ms-input-placeholder {
   color: #8c8496, 70%;
 }
 
-.contact-us-section .contact-us-container .contact-us-form-container .contact-us-form input::-ms-input-placeholder {
+.contact-us-section .contact-us-container .contact-us-form-wrap .contact-us-form-container .contact-us-form input::-ms-input-placeholder {
   color: #8c8496, 70%;
 }
 
-.contact-us-section .contact-us-container .contact-us-form-container .contact-us-form input::placeholder {
+.contact-us-section .contact-us-container .contact-us-form-wrap .contact-us-form-container .contact-us-form input::placeholder {
   color: #8c8496, 70%;
 }
 
-.contact-us-section .contact-us-container .contact-us-form-container .contact-us-form select {
+.contact-us-section .contact-us-container .contact-us-form-wrap .contact-us-form-container .contact-us-form select {
   background: rgba(234, 234, 246, 0.75);
   border-radius: 29.4045px;
   font-size: 17px;
@@ -1673,7 +1778,7 @@ header .header-image img {
   background-position-y: 50%;
 }
 
-.contact-us-section .contact-us-container .contact-us-form-container textarea {
+.contact-us-section .contact-us-container .contact-us-form-wrap .contact-us-form-container textarea {
   margin-bottom: 70px;
   height: 126.4px;
   background: rgba(234, 234, 246, 0.75);
@@ -1685,7 +1790,7 @@ header .header-image img {
   color: #8c8496;
 }
 
-.contact-us-section .contact-us-container .contact-us-form-container button {
+.contact-us-section .contact-us-container .contact-us-form-wrap .contact-us-form-container button {
   width: 196.5px;
   background-color: #b1b2dd;
   color: #ffffff;
@@ -1695,6 +1800,202 @@ header .header-image img {
   border: none;
   border-radius: 9999px;
   padding: 16px 0;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-wrap .hide-contact-us-form {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  opacity: 0%;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-wrap .hide-contact-us-form h3 {
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-wrap .hide-contact-us-form .contact-us-form {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-wrap .hide-contact-us-form .contact-us-form input {
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-wrap .hide-contact-us-form .contact-us-form select {
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-wrap .hide-contact-us-form .contact-us-form textarea {
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-wrap .hide-contact-us-form .contact-us-form button {
+  -webkit-transform: translateY(500px);
+          transform: translateY(500px);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-wrap .init-contact-us-form-submit {
+  position: absolute;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-wrap .init-contact-us-form-submit h4 {
+  text-align: center;
+  background-color: #f5f5f5;
+  font-size: 18.699px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #2e1a47;
+  padding: 42px 0;
+  margin: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  opacity: 0;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-wrap .init-contact-us-form-submit div {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin: auto 0;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-wrap .init-contact-us-form-submit div img {
+  -webkit-transform: scale(0.5) rotate(90deg);
+          transform: scale(0.5) rotate(90deg);
+  opacity: 0;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-wrap .init-contact-us-form-submit div #form-submitted {
+  color: #2e1a47;
+  font-size: 39.3387px;
+  line-height: 65px;
+  letter-spacing: 0.003em;
+  font-weight: 700;
+  margin-top: 13px;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  opacity: 0;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-wrap .init-contact-us-form-submit div #form-submitted-text {
+  width: 55%;
+  font-size: 13.3267px;
+  line-height: 19px;
+  color: rgba(140, 132, 150, 0.79);
+  font-weight: 300;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  opacity: 0;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-wrap .show-contact-us-form-submit {
+  position: relative;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-wrap .show-contact-us-form-submit h4 {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 100%;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-wrap .show-contact-us-form-submit div {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin: auto 0;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-wrap .show-contact-us-form-submit div img {
+  -webkit-transform: scale(1) rotate(0deg);
+          transform: scale(1) rotate(0deg);
+  opacity: 100%;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-wrap .show-contact-us-form-submit div #form-submitted {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 100%;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-wrap .show-contact-us-form-submit div #form-submitted-text {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 100%;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+.contact-us-section .contact-us-container .contact-us-form-wrap .display-none {
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  display: none;
 }
 
 footer {

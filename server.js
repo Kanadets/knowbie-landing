@@ -9,8 +9,6 @@ const Emails = require("./models/Emails");
 
 dotenv.config();
 
-const PORT = 5000 || process.env.PORT;
-
 const app = express();
 
 app.use(bodyParser.json());
@@ -115,4 +113,6 @@ app.post("/send-form-email", async (request, response) => {
   }
 });
 
-app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
+app.listen(process.env.PORT || 5000, () =>
+  console.log(`Server listening on port ${PORT}`)
+);

@@ -13,8 +13,6 @@ body {
   font-family: $main-font-family;
   background-color: $main-bg-color;
 
-  overflow-x: hidden;
-
   .iframe-backdrop {
     position: fixed;
     height: 100%;

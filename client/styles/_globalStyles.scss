@@ -2,15 +2,60 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: $main-font-family;
   background-color: $main-bg-color;
-  padding-top: 43px;
+
   overflow-x: hidden;
+
+  .iframe-backdrop {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    display: none;
+
+    #background-overlay {
+      background-color: rgba(0, 0, 0, 0.4);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      z-index: 99999;
+    }
+
+    iframe {
+      position: fixed;
+      left: 0;
+      right: 0;
+      margin: auto;
+      margin: auto;
+      z-index: 999999;
+      background-color: #fff;
+    }
+  }
+
+  .iframe-open {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    .iframe-backdrop {
+      iframe {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
 }

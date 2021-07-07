@@ -4,19 +4,42 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f5f5" />
     <link rel="stylesheet" href="styles/main.css" />
-    <title>Document</title>
+    <title>Knowbie</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
-    <nav>
+    <div
+      class="iframe-backdrop animate__animated animate__fadeInDown"
+      id="iframe-control"
+      data-aos="fade-down"
+    >
+      <div id="background-overlay" onclick="backdropClick()"></div>
+      <iframe
+        class="animate__animated animate__fadeInDown"
+        src="https://docs.google.com/forms/d/e/1FAIpQLSeVN0-wL8ZsdqnrKLQxP9ubNMp74faW4KX1eN9Y3YsZUqn2vQ/viewform?embedded=true"
+        width="640"
+        height="994"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        >Loading…</iframe
+      >
+    </div>
+    <nav data-aos="fade-down">
       <a href="/"><img src="assets/main-logo.svg" height="55" width="205" /></a>
       <div class="nav-links-button">
-        <div class="nav-links-burger">
-          <div class="burger-menu"></div>
-          <div class="burger-menu"></div>
-          <div class="burger-menu"></div>
+        <div class="nav-links-burger" id="nav-links-burger-open">
+          <div class="burger-menu upper-burger"></div>
+          <div class="burger-menu middle-burger"></div>
+          <div class="burger-menu bottom-burger"></div>
         </div>
-        <ul class="nav-links">
+        <ul class="nav-links" id="nav-links-control">
           <li class="nav-link nav-link-active"><a href="#home">Home</a></li>
           <li class="nav-link">
             <a href="#for-restaurants">For Restaurants</a>
@@ -24,46 +47,36 @@
           <li class="nav-link"><a href="#for-servers">For Servers</a></li>
           <li class="nav-link"><a href="#for-partners">For Partners</a></li>
           <li class="nav-link"><a href="#contact-us">Contact Us</a></li>
+          <a href="#"
+            ><button onclick="openGoogleForms()">Get early access</button></a
+          >
         </ul>
-        <a href="request_acc.html"><button>Request Access</button></a>
       </div>
     </nav>
     <header id="home">
-      <div class="header-text">
+      <div class="header-text" data-aos="fade-right">
         <div>
           <h1>
-            Creative solutions <br />
-            for
-            <span id="span-world">world-class </span>
-            <span>restaurants</span>
+            Take your servers from <span id="span-world">newbie</span> to
+            <span id="span-world">Knowbie</span>
           </h1>
           <p>
-            Meet <b>Knowbie</b>, a virtual training solution designed
-            specifically for restaurants to increase staff training
-            participation and impact by bringing the trainings to your staff.
+            Knowbie is an innovative beverage-service solution designed for
+            hospitality, by hospitality. This gamified platform teaches your
+            servers to quickly become pros in wine, beer, spirits and food
+            pairing.
           </p>
         </div>
-        <div class="header-email" id="header-email-anim">
-          <input
-            type="email"
-            id="header_email"
-            placeholder="Enter your email . . ."
-          />
-          <button id="header_button">Tell Me More</button>
-        </div>
-        <div class="email-sent" id="header-email-sent-anim">
-          <img src="assets/check_mark.svg" id="check-mark" alt="" srcset="" />
-          <p>
-            Thank you for being the first to try knowbie.<br />
-            Email insturction sent to your email
-          </p>
-          <img src="assets/happy_face.png" id="happy-face" alt="" srcset="" />
+        <div class="header-email">
+          <button id="header_button" onclick="openGoogleForms()">
+            Get early access
+          </button>
         </div>
         <span id="span-bottom-text">
           Over 2,000+ trusted partners around the world
         </span>
       </div>
-      <div class="header-image">
+      <div class="header-image" data-aos="fade-left">
         <img
           src="assets/Group1785.png"
           alt=""
@@ -75,148 +88,170 @@
     </header>
     <section class="partners-logos-section">
       <div class="partners-logos">
-        <img src="assets/logo1.png" />
-        <img src="assets/logo2.png" />
-        <img src="assets/logo3.png" />
-        <img src="assets/logo4.png" />
+        <img src="assets/mokenLogo.svg" />
+        <img src="assets/mariosLogo.svg" />
+        <img src="assets/gracie-logo.svg" />
       </div>
     </section>
     <section class="why-knowbie-section">
-      <div class="why-knowbie-intro-text">
+      <div class="why-knowbie-intro-text" data-aos="fade-in">
         <h2>WHY KNOWBIE</h2>
         <p id="intro-text">
-          Our mission is to make it easier for restaurants. Full stop.
+          Our mission is to revolutionize the way service staff are trained to
+          offer drinks
         </p>
         <span></span>
         <p id="under-intro-text">
-          Knowbie is helping restaurants achieve higher standards in beverage
-          training and easily be on par with world class restaurants and save
-          money, all at the same time.
+          Developed by career experts in the hospitality and wine industry,
+          Knowbie helps restaurants nurture savvy, confident servers who can
+          raise your restaurant’s profile, increase customer LTV, and boost
+          profits.
         </p>
       </div>
       <div class="why-knowbie-cards">
-        <div class="why-knowbie-card-container">
-          <div class="why-knowbie-card">
-            <img src="assets/purple-why.svg" alt="" srcset="" />
-            <h3>Training made fun!</h3>
-            <p>Knowbie makes beverage training easy, fun, and fast.</p>
-          </div>
-        </div>
-        <div class="why-knowbie-card-container">
-          <div class="why-knowbie-card">
-            <img src="assets/red-why.svg" alt="" srcset="" />
-            <h3>Increase your #1 profit generator</h3>
-            <p>A tool that helps new hires become more profitable faster!</p>
-          </div>
-        </div>
-        <div class="why-knowbie-card-container">
-          <div class="why-knowbie-card">
-            <img src="assets/yellow-check-mark.svg" alt="" srcset="" />
-            <h3>Standarize your service quality</h3>
-            <p>
-              With Knowbie, your team will always be confident to deliver the
-              same world class service to your customers.
-            </p>
-          </div>
-        </div>
-        <div class="why-knowbie-card-container">
-          <div class="why-knowbie-card">
-            <img src="assets/yellow-clock-why.svg" alt="" srcset="" />
-            <h3>Spend less on training</h3>
-            <p>
-              With Knowbie, restaurants will be able to free up the hours spent
-              training team members.
-            </p>
-          </div>
-        </div>
-        <div class="why-knowbie-card-container">
-          <div class="why-knowbie-card">
-            <img src="assets/purple-settings-why.svg" alt="" srcset="" />
-            <h3>Measure knowledge</h3>
-            <p>
-              Fun quizzes that will give you the peace of mind of knowing that
-              your staff have the required skills.
-            </p>
-          </div>
-        </div>
-        <div class="why-knowbie-card-container">
+        <div class="why-knowbie-card-container" data-aos="fade-in">
           <div class="why-knowbie-card">
             <img src="assets/green-why.svg" alt="" srcset="" />
-            <h3>Increased staff confidence</h3>
-            <p>
-              Your staff will always have the confidence to freely talk about
-              your beverage menu.
-            </p>
+            <div>
+              <h3>Bolster server confidence</h3>
+              <p>
+                Knowbie teaches servers everything from alcohol basics to expert
+                food pairing tips.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="why-knowbie-card-container" data-aos="fade-in">
+          <div class="why-knowbie-card">
+            <img src="assets/red-why.svg" alt="" srcset="" />
+            <div>
+              <h3>Increase profits</h3>
+              <p>
+                Confident servers inspire customers to order additional — and
+                premium — menu items.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="why-knowbie-card-container" data-aos="fade-in">
+          <div class="why-knowbie-card">
+            <img src="assets/yellow-clock-why.svg" alt="" srcset="" />
+            <div>
+              <h3>Train staff effortlessly</h3>
+              <p>
+                Leave it all to Knowbie. Our team will customize the platform to
+                suit your needs and provide lifetime support.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="why-knowbie-card-container" data-aos="fade-in">
+          <div class="why-knowbie-card">
+            <img src="assets/yellow-check-mark.svg" alt="" srcset="" />
+            <div>
+              <h3>Standarize service quality</h3>
+              <p>
+                Knowbie ensures that no matter which section diners are seated
+                in, they’ll received the same level of top service.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="why-knowbie-card-container" data-aos="fade-in">
+          <div class="why-knowbie-card">
+            <img src="assets/purple-settings-why.svg" alt="" srcset="" />
+            <div>
+              <h3>Track staff progress</h3>
+              <p>
+                Knowbie’s dashboard allows senior staff to monitor server
+                progress at every stage.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="why-knowbie-card-container" data-aos="fade-in">
+          <div class="why-knowbie-card">
+            <img src="assets/ltv-why.svg" alt="" srcset="" />
+            <div>
+              <h3>Raise customer LTV</h3>
+              <p>
+                Happy customers become regulars. Knowbie-trained servers learn
+                how to cultivate a returning diner base.
+              </p>
+            </div>
           </div>
         </div>
         <img src="assets/dec.svg" id="why-knowbie-dec-img" alt="" srcset="" />
       </div>
     </section>
-    <section class="for-restaurants-section" id="for-restaurants">
+    <section class="for-restaurants-section">
       <div class="for-restaurants-intro">
-        <div class="for-restaurants-intro-img">
-          <img src="assets/for-restaurants.svg" alt="" srcset="" />
+        <div class="for-restaurants-intro-img" data-aos="fade-right">
+          <img src="assets/Artwork.svg" alt="" srcset="" />
         </div>
-        <div class="for-restaurants-intro-text">
+        <div class="for-restaurants-intro-text" data-aos="fade-left">
           <h2>FOR RESTAURANTS</h2>
-          <h3>Every thing you need to <span>grow</span> your restaurant</h3>
-          <span
-            >Training technology built for Hospitality, by Hospitality.</span
-          >
+          <h3 id="for-restaurants-h3-desktop">
+            Knowbie trains staff to provide <span>next-level</span> service
+          </h3>
+          <h3 id="for-restaurants-h3-mobile">
+            Every thing you need to grow your restaurant
+          </h3>
+          <span>Built for hospitality, by hospitality</span>
           <ul>
             <li>
-              <b>Knowbie will train your staff</b> on the beverage education
-              needed to be successful & profitable in your restaurant.
+              <b>Play to learn:</b> Knowbie’s game-and-quiz system provides
+              high-level education, arming servers with priceless beverage and
+              food know-how.
             </li>
             <li>
-              <b>Have your menus and messaging</b> accessible for servers and
-              employees in app at all times.
+              <b>Fully customized:</b> Knowbie’s environment includes logos,
+              menus and messages from your restaurant.
             </li>
             <li>
-              <b>Dashboard that gives an overview</b> on the status of staff
-              trainings and gives you insight on completed trainings.
+              <b>Monitor progress:</b> Stay up-to-date on staff training from
+              your custom dashboard.
+            </li>
+            <li>
+              <b>Easy onboarding: </b> Knowbie makes training new servers
+              simple, and can reduce staff turnover.
             </li>
           </ul>
+
           <div
             class="for-restaurants-intro-email"
             id="for-restaurants-intro-email-anim"
           >
             <div id="for-res-form">
-              <input
-                type="email"
-                id="for-restaurants-input"
-                placeholder="Enter your email  . . ."
-                required
-              />
-              <button id="for-restaurants-btn">Request Access</button>
-            </div>
-            <div
-              class="email-sent"
-              id="for-restaurants-email-sent-anim-for-res"
-            >
-              <img
-                src="assets/check_mark.svg"
-                id="check-mark"
-                alt=""
-                srcset=""
-              />
-              <p>
-                Thank you for being the first to try knowbie.<br />
-                Email insturction sent to your email
-              </p>
-              <img
-                src="assets/happy_face.png"
-                id="happy-face"
-                alt=""
-                srcset=""
-              />
+              <button onclick="openGoogleForms()">Get early access</button>
             </div>
           </div>
         </div>
       </div>
       <div class="for-restaurants-tools">
         <div class="for-restaurants-tools-left">
-          <img src="assets/SafariDark.png" alt="" srcset="" height="679" />
+          <img
+            src="assets/SafariDark.svg"
+            id="second-dark-safari-1"
+            alt=""
+            srcset=""
+            data-aos="fade-right"
+          />
+          <img
+            src="assets/SafariDark-mob.png"
+            id="second-dark-safari-1-mob"
+            alt=""
+            srcset=""
+            data-aos="fade-right"
+          />
+          <h2 id="for-restaurants-h2-desktop" data-aos="fade-left">
+            Knowbie is a simple yet powerful <span>app</span> that maximizes
+            in-house training.
+          </h2>
+          <h2 id="for-restaurants-h2-mobile">
+            Knowbie is a simple yet <span>powerful</span> app that maximizes
+            in-house training.
+          </h2>
           <img
             src="assets/dec.svg"
             id="dec-for-restaurants"
@@ -224,73 +259,120 @@
             srcset=""
             width="105"
             height="107"
+            data-aos="fade-right"
           />
         </div>
         <div class="for-restaurants-tools-right">
-          <h2>
-            A tool that was <br />
-            created for <span>world-class</span> hospitality
-          </h2>
           <img
             src="assets/dec.svg"
             id="dec-for-restaurants-tools"
             alt=""
             srcset=""
+            data-aos="fade-left"
           />
-          <img src="assets/SafariDark-2.png" alt="" srcset="" height="679" />
+          <img
+            src="assets/SafariDark-2.png"
+            id="second-dark-safari-2"
+            alt=""
+            srcset=""
+            data-aos="fade-left"
+          />
+          <img
+            src="assets/SafariDark-2-mob.png"
+            id="second-dark-safari-mob"
+            alt=""
+            srcset=""
+            data-aos="fade-left"
+          />
         </div>
       </div>
     </section>
     <section class="for-servers-section" id="for-servers">
-      <div class="for-servers-text">
+      <div class="for-servers-text" data-aos="fade-right">
         <h2>FOR SERVERS</h2>
         <h3>Because we know it’s <span>important</span> to you.</h3>
         <span id="for-servers-span"
-          >A tool that gives you the confidence to beome a beverage
-          expert.</span
+          >The more you know, the more successful and enjoyable your shift will
+          be</span
         >
         <ul>
           <li>
-            <b>Become an expert in less than < 1.5 hours</b> to complete at
-            their own pace & cover wine, beer and spirits.
+            <b>1.5 hours:</b> That’s about how long it takes to become a
+            skilled, top-earning beverage server using the Knowbie app.
           </li>
           <li>
-            <b>Enjoyable experience</b> through micro learning content and an
-            app that makes it easy and exciting to learn about beverages.
+            <b>Get in the game:</b> Knowbie’s gamified platform and simplified
+            knowledge checks make learning fun. Really, we mean it.
           </li>
           <li>
-            <b>We gamified the learning experience</b> for extra motivation and
-            fun.
+            <b>Be in demand:</b> Knowbie-trained servers learn how to cultivate
+            customer relationships through exceptional service; they become
+            favourites and often mentor other staff.
           </li>
         </ul>
       </div>
-      <div class="for-servers-img">
+      <div class="for-servers-img" data-aos="fade-left">
         <img src="assets/for-servers.png" alt="" srcset="" />
       </div>
     </section>
     <section class="join-waitlist-section">
-      <div class="join-waitlist-div">
-        <h3><span>Join</span> the waitlist!</h3>
-        <p>
-          Join us as a beta partner and start setting a new standard. Our Beta
-          access is limited.
+      <div class="join-waitlist-div" data-aos="fade-in">
+        <h3>Calling all <span>beta testers!</span></h3>
+        <p id="join-waitlist-p-desktop">
+          Become a beta partner and help us change server training forever.
+          Access is limited.
         </p>
-        <input type="email" placeholder="Enter your email ..." />
-        <button>Request Access</button>
-        <img src="assets/dec.svg" alt="" srcset="" />
+        <p id="join-waitlist-p-mobile">
+          Join us as a beta partner and start setting a new standard. <br />
+          Our Beta access is limited.
+        </p>
+        <button data-aos="fade-in" onclick="openGoogleForms()">
+          Get early access
+        </button>
+        <img src="assets/dec.svg" alt="" srcset="" data-aos="fade-in" />
       </div>
     </section>
     <section class="show-phone-section">
-      <img src="assets/phone1.png" id="left-phone" alt="" srcset="" />
+      <img
+        src="assets/phone1.png"
+        id="left-phone"
+        alt=""
+        srcset=""
+        data-aos="fade-right"
+      />
       <div class="three-phones">
-        <img src="assets/phone2.png" id="phone1" alt="" srcset="" />
-        <img src="assets/phone3.png" id="phone2" alt="" srcset="" />
-        <img src="assets/phone4.png" id="phone3" alt="" srcset="" />
+        <img
+          src="assets/phone2.png"
+          id="phone1"
+          alt=""
+          srcset=""
+          data-aos="fade-right"
+        />
+        <img
+          src="assets/phone3.png"
+          id="phone2"
+          alt=""
+          srcset=""
+          data-aos="fade-in"
+        />
+        <img
+          src="assets/phone4.png"
+          id="phone3"
+          alt=""
+          srcset=""
+          data-aos="fade-left"
+        />
         <img src="assets/dec.svg" id="show-phone-dec" alt="" srcset="" />
       </div>
-      <img src="assets/phone5.png" id="right-phone" alt="" srcset="" />
+      <img
+        src="assets/phone5.png"
+        id="right-phone"
+        alt=""
+        srcset=""
+        data-aos="fade-left"
+      />
     </section>
-    <section class="why-knowbie-clients-reviews" id="for partners">
+    <!-- <section class="why-knowbie-clients-reviews" id="for partners">
       <div class="why-knowbie-clients-text">
         <h2>WHY KNOWBIE</h2>
         <h3>What Our Clints Say About Us</h3>
@@ -340,49 +422,36 @@
           </p>
         </div>
       </div>
-    </section>
+    </section> -->
     <section class="contact-us-section" id="contact-us">
       <div class="contact-us-container">
-        <div class="contact-us-text-info">
-          <div class="contact-us-text">
-            <h2>
-              Partner with <br />
-              us and <span>get featured!</span>
-            </h2>
-            <p>
-              Tell us a bit more about your business, and we’ll be in touch
-              shortly.
-              <b
-                >You want to become among the first to try knowbie? Sign up
-                <span>here</span>
-              </b>
-            </p>
-          </div>
-          <div class="contact-us-info">
-            <h3>Quick Contact</h3>
-            <div class="contact-info-text">
-              <img src="assets/phone_num.svg" alt="" srcset="" />
-              <p>+928607817</p>
-            </div>
-            <div class="contact-info-text">
-              <img src="assets/email.svg" alt="" srcset="" />
-              <p>hosenalkrimi1998@gmail.com</p>
-            </div>
-            <div class="contact-info-text">
-              <img
-                src="assets/time.svg"
-                id="contact-us-time-img"
-                alt=""
-                srcset=""
-              />
-              <div id="contact-us-time">
-                <p>Monday - Friday: <span>11:00 am - 9:00 pm</span></p>
-                <p>Saturday - Sunday: <span>5:00 am - 9:00 pm</span></p>
-              </div>
-            </div>
-          </div>
+        <div class="contact-us-text" data-aos="fade-right">
+          <h2 id="contact-us-text-h2-lg">
+            Partner with <br />
+            <span id="contact-us-text-span">knowbie</span>
+          </h2>
+          <h2 id="contact-us-text-h2-sm">
+            Partner with us and
+            <span id="contact-us-text-span">get featured!</span>
+          </h2>
+          <p id="contact-us-text-p-lg">
+            Interested in finding out how knowbie can boost and simplify your
+            business?
+            <b
+              >Get in touch here.
+              <span>here</span>
+            </b>
+          </p>
+          <p id="contact-us-text-p-sm">
+            Tell us a bit more about your business, and we’ll be in touch
+            shortly.
+            <b
+              >You want to become among the first to try knowbie? Sign up
+              <span>here</span></b
+            >
+          </p>
         </div>
-        <div class="contact-us-form-wrap">
+        <div class="contact-us-form-wrap" data-aos="fade-left">
           <div class="contact-us-form-container" id="anim-contact-us-container">
             <h3>
               Contact
@@ -425,30 +494,55 @@
           </div>
           <div class="init-contact-us-form-submit" id="anim-contact-us-submit">
             <h4>
-              Thank you <span>Hussain</span> Your submission has been received!
+              Thank you <span id="name-form-submit"></span> Your submission has
+              been received!
             </h4>
             <div>
               <img src="assets/big_success.svg" alt="" srcset="" />
               <span id="form-submitted">Form submitted</span>
               <span id="form-submitted-text">
-                fermentum dui est. Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Arcu, ipsum lectus urna leo fermentum dui est.
-                Lorem ipsum dolor</span
+                Our team will get back to you within 48 hours.</span
               >
+            </div>
+          </div>
+        </div>
+        <div class="contact-us-info" data-aos="fade-right">
+          <h3>Quick Contact</h3>
+          <!-- <div class="contact-info-text">
+            <img src="assets/phone_num.svg" alt="" srcset="" />
+            <p>+928607817</p>
+          </div> -->
+          <div class="contact-info-text">
+            <img src="assets/email.svg" alt="" srcset="" />
+            <p>info@getknowbie.com</p>
+          </div>
+          <div class="contact-info-text">
+            <img
+              src="assets/time.svg"
+              id="contact-us-time-img"
+              alt=""
+              srcset=""
+            />
+            <div id="contact-us-time">
+              <p>Monday - Friday: <span>11:00 am - 9:00 pm</span></p>
+              <p>Saturday - Sunday: <span>5:00 am - 9:00 pm</span></p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <footer>
+    <footer data-aos="fade-up">
       <div class="footer-get-started-main">
         <div class="footer-get-started-container">
           <div class="footer-get-started">
-            <h4>
-              Start your journey with <br />
-              knowbie now!
+            <h4 id="footer-get-started-desktop">
+              Become a beta partner and help us <br />
+              change server training forever
             </h4>
-            <button>Get Started</button>
+            <h4 id="footer-get-started-mobile">
+              Start your journey with knowbie now!
+            </h4>
+            <button onclick="openGoogleForms()">Sign me up</button>
           </div>
         </div>
         <div class="main-footer-container">
@@ -458,17 +552,45 @@
               <span>© 2021 All Rights Reserved</span>
             </div>
             <div class="footer-contact-follow">
-              <div class="footer-contact-us">
-                <h5>
-                  Contact Us
-                </h5>
-                <div>
-                  <p>
-                    hosenalkrimi@gmail.com
-                  </p>
-                  <p>
-                    +218928607817
-                  </p>
+              <div class="contact-all-info">
+                <div class="footer-contact-us">
+                  <h5>
+                    For Investors
+                  </h5>
+                  <div>
+                    <p>
+                      hosenalkrimi@gmail.com
+                    </p>
+                    <!-- <p>
+                      +218928607817
+                    </p> -->
+                  </div>
+                </div>
+                <div class="footer-contact-us">
+                  <h5>
+                    For Media
+                  </h5>
+                  <div>
+                    <p>
+                      hosenalkrimi@gmail.com
+                    </p>
+                    <!-- <p>
+                      +218928607817
+                    </p> -->
+                  </div>
+                </div>
+                <div class="footer-contact-us">
+                  <h5>
+                    Contact Us
+                  </h5>
+                  <div>
+                    <p>
+                      info@getknowbie.com
+                    </p>
+                    <!-- <p>
+                      +218928607817
+                    </p> -->
+                  </div>
                 </div>
               </div>
               <div class="footer-follow-us">
@@ -476,10 +598,9 @@
                   Follow Us
                 </h5>
                 <div class="footer-links">
+                  <a><img src="assets/fbVec.svg" /></a>
                   <a><img src="assets/insta.svg" /></a>
-                  <a><img src="assets/ball.svg" /></a>
                   <a><img src="assets/twitter.svg" /></a>
-                  <a><img src="assets/youtube.svg" /></a>
                 </div>
               </div>
             </div>
@@ -487,6 +608,10 @@
         </div>
       </div>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="scripts/sripts.js"></script>
   </body>
 </html>

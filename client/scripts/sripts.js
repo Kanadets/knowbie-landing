@@ -1,7 +1,3 @@
-const emailHeaderForm = document.getElementById("header_email");
-const emailHeaderButton = document.getElementById("header_button");
-const emailHeaderDiv = document.getElementById("header-email-anim");
-const emailHeaderSent = document.getElementById("header-email-sent-anim");
 const contactUsForm = document.getElementById("anim-contact-us-container");
 const contactUsFormSubmit = document.getElementById("anim-contact-us-submit");
 const submitContactUsBtn = document.getElementById("submit-contact-us-btn");
@@ -19,35 +15,17 @@ const messageInputContact = document.getElementById("messageInputContact");
 const forRestaurantsIntroEmailAnim = document.getElementById(
   "for-restaurants-intro-email-anim"
 );
-const forRestaurantsInput = document.getElementById("for-restaurants-input");
-const forResForm = document.getElementById("for-res-form");
-const forRestaurantsBtn = document.getElementById("for-restaurants-btn");
-const forRestaurantsEmailSentAnimForRes = document.getElementById(
-  "for-restaurants-email-sent-anim-for-res"
-);
+const spanFormSubmit = document.getElementById("name-form-submit");
 
-emailHeaderButton.addEventListener("click", async (e) => {
-  const data = { to_email: emailHeaderForm.value };
+const burgerMenu = document.getElementById("nav-links-burger-open");
 
-  const res = await sendEmail(data, "/send-email");
-
-  if (res) {
-    emailHeaderDiv.classList.add("hidden-email");
-
-    emailHeaderDiv.addEventListener("transitionend", () => {
-      emailHeaderDiv.classList.add("display-none");
-      emailHeaderSent.classList.add("email-sent-show");
-    });
-
-    // setInterval(() => {
-    //   emailHeaderSent.classList.remove("email-sent-show");
-    //   emailHeaderSent.addEventListener("transitionend", () => {
-    //     emailHeaderDiv.classList.remove("hidden-email");
-    //     emailHeaderDiv.classList.remove("display-none");
-    //   });
-    //   clearInterval();
-    // }, 5000);
-  }
+burgerMenu.addEventListener("click", () => {
+  burgerMenu.childNodes[1].classList.toggle("upper-burger-open");
+  burgerMenu.childNodes[3].classList.toggle("middle-burger-open");
+  burgerMenu.childNodes[5].classList.toggle("bottom-burger-open");
+  document
+    .getElementById("nav-links-control")
+    .classList.toggle("nav-links-open");
 });
 
 submitContactUsBtn.addEventListener("click", async () => {
@@ -67,26 +45,10 @@ submitContactUsBtn.addEventListener("click", async () => {
     contactUsForm.addEventListener("transitionend", () => {
       contactUsForm.classList.add("display-none");
       contactUsFormSubmit.classList.remove("display-none");
-      contactUsFormSubmit.classList.add("show-contact-us-form-submit");
-    });
-  }
-});
-
-forRestaurantsBtn.addEventListener("click", async () => {
-  const data = {
-    to_email: forRestaurantsInput.value,
-  };
-
-  const res = await sendEmail(data, "/send-email");
-
-  if (res) {
-    forRestaurantsIntroEmailAnim.classList.add(
-      "hide-for-restaurants-intro-email"
-    );
-
-    forRestaurantsIntroEmailAnim.addEventListener("transitionend", () => {
-      forResForm.classList.add("display-none");
-      forRestaurantsEmailSentAnimForRes.classList.add("email-sent-show");
+      contactUsForm.addEventListener("transitionend", () => {
+        spanFormSubmit.innerText = fullNameInputContact.value;
+        contactUsFormSubmit.classList.add("show-contact-us-form-submit");
+      });
     });
   }
 });
@@ -104,4 +66,13 @@ const sendEmail = async (data, url) => {
   } catch (e) {
     return e;
   }
+};
+
+const openGoogleForms = () => {
+  document.getElementById("iframe-control").classList.add("iframe-open");
+};
+
+const backdropClick = () => {
+  const iframeGoogle = document.getElementById("iframe-control");
+  iframeGoogle.classList.remove("iframe-open");
 };

@@ -89,10 +89,10 @@ app.post("/send-form-email", async (request, response) => {
       message,
     } = request.body;
     let mailOptions = {
-      from: `Knowbie contact us form  <dev@getknowbie.com>"`,
-      to: "fomindmitrii12@gmail.com",
+      from: `Knowbie landing page  <dev@getknowbie.com>"`,
+      to: "info@getknowbie.com",
       replyTo: to_email,
-      subject: "Contact",
+      subject: "Knowbie Landing page",
       html: `
        <h4>Full name: ${fullName}</h4> 
        <h4>Email: ${to_email}</h4> 

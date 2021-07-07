@@ -1,7 +1,19 @@
 @import "colors";
 
+@media (min-width: 1025px) {
+  .why-knowbie-section {
+    .why-knowbie-cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
 @media (max-width: 1025px) {
   nav {
+    z-index: 1000;
+    background-color: $main-bg-color;
+    position: relative;
+
     .nav-links-button {
       .nav-links-burger {
         display: flex;
@@ -21,8 +33,62 @@
         }
       }
 
+      #nav-links-burger-open {
+        position: relative;
+        .upper-burger {
+          transition: all 0.2s ease-in-out;
+          transform-origin: right;
+          transform: rotate(0deg);
+        }
+
+        .upper-burger-open {
+          transform-origin: right;
+          transform: rotate(-45deg);
+        }
+
+        .middle-burger {
+          transition: all 0.2s ease-in-out;
+          transform: translateX(0);
+          display: block;
+        }
+
+        .middle-burger-open {
+          opacity: 0;
+          transform: translateX(50px);
+          // display: none;
+        }
+
+        .bottom-burger {
+          transition: all 0.2s ease-in-out;
+          transform-origin: right;
+          transform: rotate(0deg);
+        }
+
+        .bottom-burger-open {
+          transform-origin: right;
+          transform: rotate(45deg);
+        }
+      }
+
       .nav-links {
-        display: none;
+        z-index: -999;
+        position: absolute;
+        left: -3%;
+        width: 110%;
+        height: 150px;
+        opacity: 0;
+        padding: 0;
+        transform-origin: top;
+        justify-content: space-around;
+        transform: translateY(50px);
+        background-color: $main-bg-color;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .nav-links-open {
+        z-index: 99;
+        opacity: 100%;
+        transform: translateY(100px);
       }
     }
 
@@ -32,8 +98,8 @@
   }
 
   header {
-    height: 45vh;
-    width: 85%;
+    height: 60vh;
+    width: 90%;
     justify-content: space-between;
 
     .header-text {
@@ -41,6 +107,7 @@
         font-size: 39.7149px;
         line-height: 48px;
         letter-spacing: -1.9353px;
+        position: relative;
       }
 
       & p {
@@ -49,15 +116,6 @@
       }
 
       .header-email {
-        & input {
-          width: 50%;
-          font-size: 14px;
-          padding: 14px 12px;
-          &::placeholder {
-            font-size: 14px;
-          }
-        }
-
         & button {
           padding: 14px 24px;
           font-size: 14px;
@@ -75,14 +133,32 @@
     }
   }
 
+  .partners-logos-section {
+    .partners-logos {
+      justify-items: center;
+    }
+  }
+
   .why-knowbie-section {
     margin-top: 120px;
 
     .why-knowbie-intro-text {
       & h2 {
-        width: 40%;
+        width: 50%;
         font-size: 45px;
       }
+
+      #intro-text {
+        width: 70%;
+      }
+
+      #under-intro-text {
+        width: 70%;
+      }
+    }
+
+    .why-knowbie-cards {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
@@ -102,7 +178,7 @@
         width: 100%;
         & img {
           width: 100%;
-          margin-right: -200px;
+          margin-right: -150px;
         }
       }
 
@@ -113,6 +189,9 @@
         align-items: center;
 
         & h3 {
+          width: 80%;
+          text-align: center;
+
           &::before {
             display: block;
             content: "";
@@ -139,40 +218,34 @@
     }
 
     .for-restaurants-tools {
-      margin-top: 140px;
+      margin-top: 107px;
 
       .for-restaurants-tools-left {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: space-between;
-        position: relative;
-        margin-left: -80px;
-        margin-right: 17px;
+
+        & h2 {
+          text-align: center;
+          align-self: center;
+          width: 80%;
+          margin-bottom: 38px;
+        }
+
+        #second-dark-safari-1 {
+          width: 80%;
+        }
 
         #dec-for-restaurants {
           position: absolute;
-          bottom: 20px;
-          left: 120px;
+          top: 103%;
+          left: 50px;
         }
       }
 
       .for-restaurants-tools-right {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-
-        #dec-for-restaurants-tools {
-          position: absolute;
-          right: 150px;
-          top: 15%;
-          z-index: 2;
-        }
-
-        & h2 {
-          width: 100%;
-          line-height: 50px;
-          font-size: 38px;
+        #second-dark-safari-2 {
+          width: 80%;
         }
       }
     }
@@ -198,12 +271,12 @@
       align-items: center;
 
       & h2 {
-        width: 50%;
+        width: 70%;
       }
 
       #for-servers-span {
         &::before {
-          bottom: 30px;
+          top: -70%;
           margin: auto;
           right: 0;
           left: 0;
@@ -224,11 +297,13 @@
     padding: 50px 0;
 
     .join-waitlist-div {
-      width: 65%;
+      width: 80%;
 
       & h3 {
         margin-bottom: 40px;
         margin-top: 0;
+        line-height: 50px;
+        width: 100%;
       }
 
       & p {
@@ -236,15 +311,9 @@
         margin-bottom: 25px;
       }
 
-      & input {
-        font-size: 18px;
-        padding: 10px 20px;
-      }
-
       & button {
-        font-weight: 400;
-        font-size: 18px;
-        padding: 10px 20px;
+        margin-top: 0;
+        padding: 12px 37px;
       }
 
       & img {
@@ -397,54 +466,999 @@
       flex-direction: column;
       align-items: center;
 
-      .contact-us-text-info {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 30px;
+      .contact-us-text {
         width: 100%;
+        margin: 0 auto;
+        text-align: center;
 
-        .contact-us-text {
-          margin: 0 auto;
-          text-align: center;
+        #contact-us-text-h2-lg {
+          display: none;
+        }
 
-          & h2 {
-            &::before {
-              margin: auto;
-              right: 0;
-              left: 0;
-            }
-          }
+        #contact-us-text-h2-sm {
+          display: block;
+        }
 
-          & p {
-            width: 80%;
-            margin: 15px auto;
+        & h2 {
+          &::before {
+            margin: auto;
+            right: 0;
+            left: 0;
+            width: 36px;
+            bottom: -25%;
           }
         }
 
-        .contact-us-info {
-          background-color: $white-bg-color;
-          padding: 80px 42px 50px 35px;
-          box-shadow: 0px 14px 27px rgba(0, 0, 0, 0.07);
-          border-radius: 29.4045px;
-          width: 80%;
+        #contact-us-text-p-lg {
+          display: none;
+        }
 
-          & h3 {
-            align-self: flex-end;
-            font-size: 34px;
-            line-height: 40px;
-            letter-spacing: -1.53339px;
-            font-family: $secondary-font-family;
-            color: $primary-text-color;
-            margin-top: 0;
+        #contact-us-text-p-sm {
+          display: block;
+        }
+
+        & p {
+          width: 80%;
+          margin: 15px auto;
+          margin-bottom: 58px;
+        }
+      }
+
+      .contact-us-info {
+        background-color: $white-bg-color;
+        padding: 80px 42px 50px 35px;
+        box-shadow: 0px 14px 27px rgba(0, 0, 0, 0.07);
+        border-radius: 29.4045px;
+        width: 80%;
+        margin-top: 87px;
+        height: 215px;
+
+        & h3 {
+          align-self: flex-start;
+          font-size: 34px;
+          line-height: 40px;
+          letter-spacing: -1.53339px;
+          font-family: $secondary-font-family;
+          color: $primary-text-color;
+          margin-top: 0;
+        }
+
+        .contact-info-text {
+          & p {
+            font-size: 16.55px;
+            line-height: 21px;
+            letter-spacing: 0.719803px;
+          }
+        }
+      }
+
+      .contact-us-form-wrap {
+        width: 78%;
+        margin-left: 0;
+
+        .contact-us-form-container {
+          button {
+            align-self: center;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    .footer-get-started-main {
+      .footer-get-started-container {
+        .footer-get-started {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+
+          #footer-get-started-desktop {
+            display: none;
+          }
+
+          #footer-get-started-mobile {
+            display: block;
+          }
+
+          button {
+            margin-bottom: 46.512px;
           }
         }
       }
     }
 
-    .contact-us-form-container {
-      width: 80%;
+    .main-footer-container {
+      .main-footer {
+        width: 95%;
+        flex-direction: column-reverse;
+
+        .footer-knowbie-logo {
+          margin-top: 100px;
+          align-items: center;
+        }
+
+        .footer-contact-follow {
+          justify-content: space-around;
+          width: 100%;
+
+          .contact-all-info {
+            width: 90%;
+          }
+
+          .footer-follow-us {
+            margin-left: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  nav {
+    width: 85%;
+
+    a {
+      img {
+        height: 38px;
+        width: 140px;
+      }
+    }
+
+    .nav-links-button {
+      .nav-links-burger {
+        .burger-menu {
+          height: 3px;
+        }
+      }
+
+      #nav-links-burger-open {
+        position: relative;
+
+        .upper-burger {
+          transition: all 0.2s ease-in-out;
+          transform-origin: center;
+          transform: rotate(0deg);
+          position: absolute;
+          top: 0;
+        }
+
+        .upper-burger-open {
+          transform-origin: center;
+
+          top: 50%;
+          transform: translateY(-50%) rotate(-45deg);
+          margin: auto;
+        }
+
+        .middle-burger {
+          transition: all 0.2s ease-in-out;
+          transform: translateX(0);
+          display: block;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+        }
+
+        .middle-burger-open {
+          opacity: 0;
+          transform: translateX(50px);
+          // display: none;
+        }
+
+        .bottom-burger {
+          transition: all 0.2s ease-in-out;
+          transform-origin: center;
+          transform: rotate(0deg);
+          position: absolute;
+          bottom: 0;
+        }
+
+        .bottom-burger-open {
+          transform-origin: center;
+          margin: auto;
+          bottom: 50%;
+          transform: translateY(50%) rotate(45deg);
+        }
+      }
+
+      .nav-links {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 330px;
+        width: 115%;
+        padding-bottom: 50px;
+
+        .nav-link {
+          margin: 0;
+          margin-bottom: 26px;
+
+          &:last-child {
+            margin-right: 39px;
+          }
+        }
+      }
+
+      .nav-links-open {
+        z-index: 99;
+        opacity: 100%;
+        transform: translateY(250px);
+      }
+    }
+
+    button {
+      display: block;
+    }
+  }
+
+  header {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    height: 100%;
+    margin-top: 65px;
+
+    .header-text {
+      text-align: center;
+
+      & h1 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 38px;
+        color: $primary-text-color;
+        margin-bottom: 27px;
+        position: relative;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      & p {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 150%;
+        margin-bottom: 0;
+      }
+
+      .header-email {
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+        position: relative;
+
+        & button {
+          width: 100%;
+          font-weight: bold;
+          font-size: 17px;
+          line-height: 21px;
+          letter-spacing: -0.383837px;
+        }
+      }
+
+      #span-bottom-text {
+        display: none;
+      }
+    }
+
+    .header-image {
+      width: 100%;
+      & img {
+        display: block;
+        width: 482px;
+        height: 321.37px;
+      }
+    }
+  }
+
+  .partners-logos-section {
+    margin-top: 55px;
+    .partners-logos {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 41px;
+      img {
+        width: 120.69px;
+        height: 26.2px;
+      }
+    }
+  }
+
+  .why-knowbie-section {
+    margin-top: 76px;
+
+    .why-knowbie-intro-text {
+      text-align: center;
+      & h2 {
+        width: 90%;
+        font-weight: bold;
+        font-size: 22.3679px;
+        line-height: 28px;
+        margin-bottom: 0;
+      }
+
+      #intro-text {
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 120%;
+        text-align: center;
+        letter-spacing: 0.02em;
+        width: 90%;
+        margin-top: 25px;
+      }
+
+      & span {
+        height: 2px;
+        width: 31px;
+        background-color: $pigeon-post-color;
+      }
+
+      #under-intro-text {
+        font-weight: 100;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 150%;
+
+        width: 85%;
+      }
+    }
+
+    .why-knowbie-cards {
+      position: relative;
+      width: 90%;
+      display: grid;
+      grid-template-columns: none;
+      row-gap: 28px;
+      margin-top: 50px;
+      z-index: 5;
+
+      .why-knowbie-card-container {
+        .why-knowbie-card {
+          padding: 11px 15px;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          width: 85%;
+
+          img {
+            width: 45.96px;
+            height: 43.09px;
+            margin-right: 19px;
+          }
+
+          div {
+            & h3 {
+              font-weight: bold;
+              font-size: 16px;
+              line-height: 20px;
+            }
+
+            & p {
+              font-weight: normal;
+              font-size: 13px;
+              line-height: 150%;
+            }
+          }
+        }
+      }
+
+      & #why-knowbie-dec-img {
+        display: none;
+      }
+    }
+  }
+
+  .for-restaurants-section {
+    margin-top: 74px;
+
+    .for-restaurants-intro {
+      .for-restaurants-intro-img {
+        width: 400.94px;
+        height: 240px;
+        margin-left: -18%;
+      }
+
+      .for-restaurants-intro-text {
+        margin-top: 60px;
+
+        & h2 {
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 30px;
+          letter-spacing: 1.5px;
+        }
+
+        & h3 {
+          font-weight: bold;
+          font-size: 22px;
+          line-height: 150%;
+          letter-spacing: 0.02em;
+          width: 100%;
+
+          &::before {
+            display: block;
+            content: "";
+            width: 31px;
+            height: 2px;
+            background: $web-orange-color;
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+          }
+        }
+
+        #for-restaurants-h3-desktop {
+          display: none;
+        }
+
+        #for-restaurants-h3-mobile {
+          display: block;
+        }
+
+        & span {
+          font-size: 17px;
+          line-height: 20px;
+          text-align: center;
+        }
+
+        & ul {
+          margin-top: 30px;
+          margin-left: 0;
+          list-style: none;
+          padding-left: 20px;
+          width: 100%;
+
+          & li {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 150%;
+            margin-bottom: 10px;
+
+            & b {
+              color: $primary-text-color;
+              font-weight: 400;
+            }
+          }
+
+          & li::before {
+            content: "\2022";
+            color: $web-orange-color;
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 9999px;
+            margin-left: -1em;
+          }
+        }
+
+        .for-restaurants-intro-email {
+          width: 100%;
+          margin-top: 52px;
+
+          #for-res-form {
+            width: 100%;
+
+            & button {
+              padding: 12px 0;
+              font-weight: bold;
+              font-size: 17px;
+              line-height: 21px;
+              letter-spacing: -0.383837px;
+              width: 100%;
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .for-restaurants-tools {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      margin-top: 103px;
+
+      .for-restaurants-tools-left {
+        display: flex;
+        flex-direction: column-re;
+        justify-content: center;
+        align-items: center;
+
+        & h2 {
+          width: 80%;
+          font-weight: bold;
+          font-size: 22px;
+          line-height: 150%;
+          text-align: center;
+
+          & span {
+            color: $web-orange-color;
+          }
+        }
+
+        #for-restaurants-h2-desktop {
+          display: none;
+        }
+
+        #for-restaurants-h2-mobile {
+          display: block;
+        }
+
+        #dec-for-restaurants {
+          position: absolute;
+          top: 125%;
+          left: 5%;
+          width: 43.53px;
+          height: 44.31px;
+        }
+
+        #second-dark-safari-1 {
+          display: none;
+        }
+
+        #second-dark-safari-1-mob {
+          display: block;
+          width: 318.96px;
+          height: 213.16px;
+        }
+      }
+
+      .for-restaurants-tools-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        #dec-for-restaurants-tools {
+          position: absolute;
+          right: 30px;
+          top: 65%;
+          right: 10px;
+          z-index: 2;
+          width: 43.53px;
+          height: 44.31px;
+        }
+
+        #second-dark-safari-2 {
+          position: absolute;
+          right: 0;
+          top: 50%;
+          display: none;
+        }
+
+        #second-dark-safari-mob {
+          position: absolute;
+          bottom: -40%;
+          left: 20%;
+          display: block;
+          width: 318.96px;
+          height: 213.16px;
+        }
+      }
+    }
+  }
+
+  .for-servers-section {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+    margin-top: 250px;
+
+    .for-servers-img img {
+      width: 440.91px;
+    }
+
+    .for-servers-text {
+      width: 90%;
+
+      & h2 {
+        margin-top: 52px;
+        margin-bottom: 31px;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: 1.5px;
+      }
+
+      & h3 {
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 150%;
+        text-align: center;
+        letter-spacing: 0.02em;
+        width: 90%;
+
+        & span {
+          font-size: 22px;
+        }
+      }
+
+      #for-servers-span {
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 150%;
+        width: 90%;
+      }
+
+      & ul {
+        margin-top: 55px;
+        margin-left: 0;
+        list-style: none;
+        padding-left: 20px;
+        width: 100%;
+
+        & li {
+          color: $secondary-text-color;
+
+          font-size: 15px;
+          line-height: 150%;
+          margin-bottom: 10px;
+          font-weight: 400;
+
+          & b {
+            color: $primary-text-color;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  .join-waitlist-section {
+    padding: 62px 23px;
+    width: 80%;
+
+    .join-waitlist-div {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & h3 {
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 17px;
+        letter-spacing: -0.819398px;
+        margin-bottom: 16px;
+      }
+
+      #join-waitlist-p-desktop {
+        display: none;
+      }
+      #join-waitlist-p-mobile {
+        display: block;
+      }
+
+      & p {
+        margin: 0;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 150%;
+        width: 80%;
+      }
+
+      & button {
+        margin-top: 37px;
+        width: 100%;
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 21px;
+        letter-spacing: -0.383837px;
+        padding: 12px 0;
+      }
+
+      & img {
+        width: 38.23px;
+        height: 39.79px;
+        position: absolute;
+        left: -10%;
+        top: -25%;
+      }
+    }
+  }
+
+  .show-phone-section {
+    justify-content: center;
+    margin-top: 220px;
+
+    .three-phones {
+      position: relative;
+      height: 100%;
+      width: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      #phone1 {
+        height: 290.74px;
+        left: -19px;
+        top: -71px;
+      }
+
+      #phone2 {
+        position: relative;
+
+        height: 319.08px;
+        left: 0;
+      }
+
+      #phone3 {
+        height: 290.74px;
+        left: 75px;
+        top: -71px;
+      }
+
+      #show-phone-dec {
+        width: 44.82px;
+        height: 45.63px;
+        position: absolute;
+        z-index: 10001;
+        left: 199px;
+        bottom: 120px;
+      }
+    }
+  }
+
+  .contact-us-section {
+    margin-top: 130px;
+    padding: 43px 35px;
+
+    .contact-us-container {
+      .contact-us-text {
+        & h2 {
+          font-weight: bold;
+          font-size: 22px;
+          line-height: 150%;
+          letter-spacing: 0.02em;
+        }
+
+        & p {
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 150%;
+          width: 100%;
+        }
+      }
+
+      .contact-us-info {
+        width: 80%;
+
+        padding: 11px 16px 37px 24px;
+        & h3 {
+          font-weight: bold;
+          font-size: 22px;
+          line-height: 26px;
+          letter-spacing: -0.651067px;
+          align-self: flex-end;
+        }
+
+        .contact-info-text {
+          width: 100%;
+          & p {
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 20px;
+          }
+
+          #contact-us-time-img {
+            align-self: center;
+          }
+
+          #contact-us-time {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            flex-wrap: wrap;
+
+            & p {
+              display: flex;
+              flex-direction: column;
+              text-align: center;
+              margin-top: 0;
+
+              &:last-child {
+                margin-top: 0px;
+              }
+
+              & span {
+                margin-left: 0px;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 20px;
+              }
+            }
+          }
+        }
+      }
+
+      .contact-us-form-wrap {
+        width: 80%;
+        padding: 37px 15px 48px 15px;
+        height: 579px;
+        .contact-us-form-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          & h3 {
+            font-weight: bold;
+            font-size: 22px;
+            line-height: 20px;
+            align-self: flex-start;
+            margin-bottom: 30px;
+          }
+
+          .contact-us-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 0;
+            margin-bottom: 22px;
+            width: 90%;
+
+            & input {
+              width: 100%;
+              font-weight: normal;
+              font-size: 15px;
+              line-height: 19px;
+              margin-bottom: 17px;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+
+            & select {
+              width: 114%;
+              margin-bottom: 17px;
+              font-weight: normal;
+              font-size: 15px;
+              line-height: 19px;
+            }
+          }
+
+          & textarea {
+            margin-bottom: 26px;
+            width: 90%;
+          }
+
+          & button {
+            width: 100%;
+            font-weight: bold;
+            font-size: 15.7857px;
+            line-height: 20px;
+            letter-spacing: -0.35642px;
+            padding: 10px 0;
+          }
+        }
+
+        & .init-contact-us-form-submit {
+          & h4 {
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 150%;
+            text-align: center;
+            padding: 18px 32px;
+          }
+
+          & div {
+            & img {
+              width: 61.27px;
+              height: 61.27px;
+            }
+
+            & #form-submitted {
+              font-weight: bold;
+              font-size: 29.5439px;
+              line-height: 49px;
+              letter-spacing: 0.003em;
+            }
+
+            & #form-submitted-text {
+              font-weight: normal;
+              font-size: 12px;
+              line-height: 14px;
+            }
+          }
+        }
+
+        & .display-none {
+          position: absolute;
+        }
+      }
+    }
+  }
+
+  footer {
+    .footer-get-started-main {
+      .footer-get-started-container {
+        .footer-get-started {
+          & h4 {
+            font-weight: bold;
+            font-size: 22px;
+            line-height: 150%;
+            width: 70%;
+          }
+
+          & button {
+            font-weight: bold;
+            font-size: 11.1054px;
+            line-height: 19px;
+            padding: 8px 31px;
+          }
+        }
+      }
+    }
+
+    .main-footer-container {
+      padding-top: 0;
+      .main-footer {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+
+        .footer-knowbie-logo {
+          & span {
+            margin-top: 22px;
+          }
+        }
+
+        .footer-contact-follow {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .contact-all-info {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .footer-contact-us {
+              & h5 {
+                font-weight: bold;
+                font-size: 20.7274px;
+                line-height: 29px;
+                margin-bottom: 0;
+                margin-top: 60px;
+              }
+
+              & p {
+                font-weight: normal;
+                font-size: 16.9185px;
+                line-height: 29px;
+                letter-spacing: 0.003em;
+              }
+            }
+          }
+
+          .footer-follow-us {
+            width: 100%;
+            margin-left: 0;
+
+            .footer-links {
+              justify-content: space-evenly;
+            }
+
+            & h5 {
+              text-align: center;
+              font-weight: bold;
+              font-size: 20.7274px;
+              line-height: 29px;
+              margin-top: 60px;
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
     }
   }
 }

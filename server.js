@@ -107,9 +107,10 @@ app.post("/send-form-email", async (request, response) => {
       .then((res) =>
         response.status(200).json({ message: "Message was sent successfully" })
       )
-      .catch((err) => console.log(err));
+      .catch((err) =>
+        response.status(400).json({ message: "Something went wrong" })
+      );
   } catch (err) {
-    console.log(err);
     response.status(400).json({ message: "Something went wrong" });
   }
 });

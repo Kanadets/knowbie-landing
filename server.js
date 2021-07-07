@@ -114,5 +114,5 @@ app.post("/send-form-email", async (request, response) => {
 });
 
 app.listen(process.env.PORT || 5000, () =>
-  console.log(`Server listening on port ${PORT}`)
+  console.log(`Server listening on port ${process.env.PORT || 5000}`)
 );

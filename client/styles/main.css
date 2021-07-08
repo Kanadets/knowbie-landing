@@ -1678,6 +1678,9 @@ footer .main-footer-container .main-footer .footer-contact-follow .footer-follow
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   margin-top: 25px;
 }
 

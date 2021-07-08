@@ -61,6 +61,13 @@ nav {
             transform: scaleX(1);
             transform-origin: left;
           }
+
+          // span:hover::before {
+          //   font-size: 13.8667px;
+          //   line-height: 17px;
+
+          //   content: "Coming soon";
+          // }
         }
 
         &:hover {

@@ -2,6 +2,8 @@ const contactUsForm = document.getElementById("anim-contact-us-container");
 const contactUsFormSubmit = document.getElementById("anim-contact-us-submit");
 const submitContactUsBtn = document.getElementById("submit-contact-us-btn");
 
+const comingSoonTextChange = document.getElementById("coming-soon-link");
+
 const fullNameInputContact = document.getElementById("fullNameInputContact");
 const emailInputContact = document.getElementById("emailInputContact");
 const companyTypeInputContact = document.getElementById(
@@ -84,3 +86,11 @@ const backdropClick = () => {
   const iframeGoogle = document.getElementById("iframe-control");
   iframeGoogle.classList.remove("iframe-open");
 };
+
+comingSoonTextChange.addEventListener("mouseenter", () => {
+  document.getElementById("coming-soon-link").innerText = "Coming soon";
+});
+
+comingSoonTextChange.addEventListener("mouseleave", () => {
+  document.getElementById("coming-soon-link").innerText = "Blog";
+});

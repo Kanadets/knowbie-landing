@@ -12,8 +12,11 @@ body {
   align-items: center;
   font-family: $main-font-family;
   background-color: $main-bg-color;
+  overflow-x: hidden;
+  overflow-y: hidden;
 
   .iframe-backdrop {
+    overflow-x: hidden;
     position: fixed;
     height: 100%;
     width: 100%;
@@ -32,13 +35,17 @@ body {
     }
 
     iframe {
+      height: 80%;
       position: fixed;
+      top: 0;
       left: 0;
       right: 0;
+      bottom: 0;
       margin: auto;
       margin: auto;
       z-index: 999999;
       background-color: #fff;
+      border-radius: 30px;
     }
   }
 
@@ -48,11 +55,17 @@ body {
 }
 
 @media (max-width: 767px) {
-  body {
-    .iframe-backdrop {
-      iframe {
-        height: 100%;
-        width: 100%;
+  html {
+    overflow-x: hidden;
+
+    body {
+      overflow-x: hidden;
+      overflow-y: hidden;
+      .iframe-backdrop {
+        iframe {
+          height: 100%;
+          width: 100%;
+        }
       }
     }
   }

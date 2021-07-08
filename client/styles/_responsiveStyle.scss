@@ -669,7 +669,7 @@
         justify-content: space-around;
         align-items: center;
         height: 330px;
-        width: 115%;
+        max-width: 110%;
         padding-bottom: 50px;
 
         .nav-link {
@@ -698,7 +698,6 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 85%;
     height: 100%;
     margin-top: 65px;
 
@@ -746,14 +745,13 @@
       }
     }
 
-    .header-image {
-      width: 100%;
-      & img {
-        display: block;
-        width: 482px;
-        height: 321.37px;
-      }
+    // .header-image {
+    //   width: 100%;
+    & img {
+      width: 482px;
+      height: 335.77px;
     }
+    //}
   }
 
   .partners-logos-section {

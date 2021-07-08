@@ -23,6 +23,7 @@ body {
   background-color: #f5f5f5;
   overflow-x: hidden;
   overflow-y: hidden;
+  position: relative;
 }
 
 body .iframe-backdrop {
@@ -45,18 +46,76 @@ body .iframe-backdrop #background-overlay {
   z-index: 99999;
 }
 
-body .iframe-backdrop iframe {
+body .iframe-backdrop .iframe-main-container {
   height: 80%;
+  width: 640px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: auto;
-  margin: auto;
   z-index: 999999;
   background-color: #fff;
   border-radius: 30px;
+}
+
+body .iframe-backdrop .iframe-main-container #close-iframe {
+  cursor: pointer;
+  z-index: 99999999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 16px;
+  width: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  border-radius: 99999px;
+  padding: 5px;
+}
+
+body .iframe-backdrop .iframe-main-container #close-iframe #upper-span {
+  height: 2px;
+  width: 20px;
+  background-color: #2e1a47;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+body .iframe-backdrop .iframe-main-container #close-iframe #bottom-span {
+  height: 2px;
+  width: 20px;
+  background-color: #2e1a47;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+body .iframe-backdrop .iframe-main-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 80%;
 }
 
 body .iframe-open {
@@ -71,7 +130,11 @@ body .iframe-open {
     overflow-x: hidden;
     overflow-y: hidden;
   }
-  html body .iframe-backdrop iframe {
+  html body .iframe-backdrop .iframe-main-container {
+    height: 100%;
+    width: 100%;
+  }
+  html body .iframe-backdrop .iframe-main-container iframe {
     height: 100%;
     width: 100%;
   }
@@ -257,7 +320,7 @@ header .header-text h1::before {
   height: 2px;
   width: 32px;
   background-color: #ff6a4d;
-  bottom: -10%;
+  bottom: -15px;
 }
 
 header .header-text h1 #span-world {
@@ -353,19 +416,19 @@ header .header-text #span-bottom-text {
   color: #a9a1a1;
 }
 
-header .header-image {
-  width: 55%;
-}
-
-header .header-image img {
+header img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-left: -60px;
 }
 
+header .header-image {
+  width: 55%;
+}
+
 .partners-logos-section {
-  margin-top: 25px;
+  margin-top: 116px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -405,7 +468,7 @@ header .header-image img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 239px;
+  margin-top: 215px;
 }
 
 .why-knowbie-section .why-knowbie-intro-text {
@@ -505,7 +568,7 @@ header .header-image img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 346px;
+  margin-top: 243px;
 }
 
 .for-restaurants-section .for-restaurants-intro {
@@ -562,14 +625,6 @@ header .header-image img {
   position: absolute;
   bottom: -15px;
   left: 0;
-}
-
-.for-restaurants-section .for-restaurants-intro .for-restaurants-intro-text #for-restaurants-h3-desktop {
-  display: block;
-}
-
-.for-restaurants-section .for-restaurants-intro .for-restaurants-intro-text #for-restaurants-h3-mobile {
-  display: none;
 }
 
 .for-restaurants-section .for-restaurants-intro .for-restaurants-intro-text span {
@@ -729,6 +784,10 @@ header .header-image img {
   display: none;
 }
 
+.for-restaurants-section .for-restaurants-tools .for-restaurants-tools-left #second-dark-safari-1 {
+  height: 679px;
+}
+
 .for-restaurants-section .for-restaurants-tools .for-restaurants-tools-right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -752,7 +811,8 @@ header .header-image img {
 .for-restaurants-section .for-restaurants-tools .for-restaurants-tools-right #second-dark-safari-2 {
   position: absolute;
   right: 0;
-  top: 50%;
+  top: 55%;
+  height: 679px;
 }
 
 .for-restaurants-section .for-restaurants-tools .for-restaurants-tools-right #second-dark-safari-mob {
@@ -892,14 +952,6 @@ header .header-image img {
   color: #82db6d;
 }
 
-.join-waitlist-section .join-waitlist-div #join-waitlist-p-desktop {
-  display: block;
-}
-
-.join-waitlist-section .join-waitlist-div #join-waitlist-p-mobile {
-  display: none;
-}
-
 .join-waitlist-section .join-waitlist-div p {
   margin: 0;
   font-weight: normal;
@@ -988,15 +1040,16 @@ header .header-image img {
 .show-phone-section .three-phones #show-phone-dec {
   position: absolute;
   z-index: 10001;
-  left: 375px;
-  bottom: -640px;
+  left: 335px;
+  bottom: -626px;
 }
 
 .contact-us-section {
   margin-top: 150px;
   background-color: #eaeaf6;
   width: 100%;
-  padding: 140px 140px;
+  padding-top: 66px;
+  padding-bottom: 117px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1019,20 +1072,21 @@ header .header-image img {
 
 .contact-us-section .contact-us-container {
   width: 90%;
-  display: -ms-grid;
-  display: grid;
-  justify-items: center;
-  -ms-grid-columns: 1fr 2fr;
-      grid-template-columns: 1fr 2fr;
-  grid-auto-rows: 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.contact-us-section .contact-us-container .contact-us-text #contact-us-text-h2-lg {
-  display: block;
-}
-
-.contact-us-section .contact-us-container .contact-us-text #contact-us-text-h2-sm {
-  display: none;
+.contact-us-section .contact-us-container .contact-us-text {
+  text-align: center;
+  width: 40%;
 }
 
 .contact-us-section .contact-us-container .contact-us-text h2 {
@@ -1040,7 +1094,7 @@ header .header-image img {
   font-size: 35px;
   line-height: 50px;
   color: #2e1a47;
-  margin-bottom: 24px;
+  margin-bottom: 56px;
   position: relative;
 }
 
@@ -1051,20 +1105,14 @@ header .header-image img {
   height: 2px;
   background: #b1b2dd;
   position: absolute;
-  bottom: -5px;
+  bottom: -30px;
   left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .contact-us-section .contact-us-container .contact-us-text h2 span {
   color: #b1b2dd;
-}
-
-.contact-us-section .contact-us-container .contact-us-text #contact-us-text-p-lg {
-  display: block;
-}
-
-.contact-us-section .contact-us-container .contact-us-text #contact-us-text-p-sm {
-  display: none;
 }
 
 .contact-us-section .contact-us-container .contact-us-text p {
@@ -1072,91 +1120,13 @@ header .header-image img {
   font-size: 20px;
   line-height: 150%;
   color: #8c8496;
-  width: 348px;
+  margin-top: 0;
+  margin-bottom: 75px;
 }
 
 .contact-us-section .contact-us-container .contact-us-text p span {
   color: #b1b2dd;
-}
-
-.contact-us-section .contact-us-container .contact-us-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 404px;
-  background-color: #ffffff;
-  padding-left: 35px;
-  -webkit-box-shadow: 0px 14px 27px rgba(0, 0, 0, 0.07);
-          box-shadow: 0px 14px 27px rgba(0, 0, 0, 0.07);
-  border-radius: 29.4045px;
-}
-
-.contact-us-section .contact-us-container .contact-us-info h3 {
-  font-weight: bold;
-  font-size: 34.9714px;
-  line-height: 41px;
-  letter-spacing: -1.5772px;
-  font-family: "Karla", sans-serif;
-  color: #2e1a47;
-  margin-top: 0;
-}
-
-.contact-us-section .contact-us-container .contact-us-info .contact-info-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 30px;
-  width: 445px;
-}
-
-.contact-us-section .contact-us-container .contact-us-info .contact-info-text:last-child {
-  margin-bottom: 0;
-}
-
-.contact-us-section .contact-us-container .contact-us-info .contact-info-text p {
-  margin-left: 20px;
-  font-size: 17.0964px;
-  line-height: 22px;
-  letter-spacing: 1.12017px;
-  color: #aea9b5;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.contact-us-section .contact-us-container .contact-us-info .contact-info-text #contact-us-time-img {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-}
-
-.contact-us-section .contact-us-container .contact-us-info .contact-info-text #contact-us-time p {
-  text-align: center;
-  margin-top: 0;
-}
-
-.contact-us-section .contact-us-container .contact-us-info .contact-info-text #contact-us-time p:last-child {
-  margin-top: 14px;
-}
-
-.contact-us-section .contact-us-container .contact-us-info .contact-info-text #contact-us-time p span {
-  margin-left: 15px;
-  font-weight: normal;
-  font-size: 17.5849px;
-  line-height: 22px;
-  letter-spacing: -0.879245px;
+  cursor: pointer;
 }
 
 .contact-us-section .contact-us-container .contact-us-form-wrap {
@@ -1219,6 +1189,7 @@ header .header-image img {
   padding: 15px 20px;
   color: #8c8496;
   border-radius: 30.2446px;
+  font-family: "Mulish", sans-serif;
 }
 
 .contact-us-section .contact-us-container .contact-us-form-wrap .contact-us-form-container .contact-us-form input::-webkit-input-placeholder {
@@ -1240,8 +1211,9 @@ header .header-image img {
 .contact-us-section .contact-us-container .contact-us-form-wrap .contact-us-form-container .contact-us-form select {
   background: rgba(234, 234, 246, 0.75);
   border-radius: 29.4045px;
-  font-size: 17px;
-  line-height: 21px;
+  font-weight: normal;
+  font-size: 17.4857px;
+  line-height: 22px;
   border: none;
   padding: 15px 20px;
   color: #8c8496;
@@ -1252,7 +1224,8 @@ header .header-image img {
   background-repeat: no-repeat;
   background-position-x: 95%;
   background-position-y: 50%;
-  color: rgba(140, 132, 150, 0.7);
+  color: #8c8496;
+  font-family: "Mulish", sans-serif;
 }
 
 .contact-us-section .contact-us-container .contact-us-form-wrap .contact-us-form-container textarea {
@@ -1260,12 +1233,12 @@ header .header-image img {
   height: 126.4px;
   background: rgba(234, 234, 246, 0.75);
   border-radius: 29.4045px;
-  font-weight: normal;
   font-size: 17.4857px;
   line-height: 22px;
   border: none;
   padding: 15px 20px;
   color: #8c8496;
+  font-family: "Mulish", sans-serif;
 }
 
 .contact-us-section .contact-us-container .contact-us-form-wrap .contact-us-form-container textarea::-webkit-input-placeholder {
@@ -1288,15 +1261,15 @@ header .header-image img {
   width: 202px;
   background-color: #b1b2dd;
   color: #ffffff;
-  font-size: 23.6571px;
+  font-size: 20px;
   line-height: 35px;
   letter-spacing: 0.003em;
   border: none;
   border-radius: 9999px;
   padding: 16px 0;
   cursor: pointer;
-  -webkit-box-shadow: 0px 4px 15px rgba(177, 178, 221, 0.5);
-          box-shadow: 0px 4px 15px rgba(177, 178, 221, 0.5);
+  -webkit-filter: drop-shadow(0px 4px 15px rgba(177, 178, 221, 0.7));
+          filter: drop-shadow(0px 4px 15px rgba(177, 178, 221, 0.7));
 }
 
 .contact-us-section .contact-us-container .contact-us-form-wrap .hide-contact-us-form {
@@ -1698,6 +1671,9 @@ footer .main-footer-container .main-footer .footer-contact-follow .footer-follow
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -2063,8 +2039,8 @@ footer .main-footer-container .main-footer .footer-contact-follow .footer-follow
   }
   .show-phone-section .three-phones #phone1 {
     height: 650px;
-    left: -175px;
-    top: -45px;
+    left: -217px;
+    top: -52px;
   }
   .show-phone-section .three-phones #phone2 {
     position: relative;
@@ -2072,8 +2048,8 @@ footer .main-footer-container .main-footer .footer-contact-follow .footer-follow
   }
   .show-phone-section .three-phones #phone3 {
     height: 650px;
-    left: 25px;
-    top: -45px;
+    left: 16px;
+    top: -52px;
   }
   .show-phone-section .three-phones #show-phone-dec {
     position: absolute;
@@ -2189,12 +2165,15 @@ footer .main-footer-container .main-footer .footer-contact-follow .footer-follow
   .contact-us-section .contact-us-container .contact-us-text #contact-us-text-h2-sm {
     display: block;
   }
+  .contact-us-section .contact-us-container .contact-us-text h2 {
+    margin-bottom: 31px;
+  }
   .contact-us-section .contact-us-container .contact-us-text h2::before {
     margin: auto;
     right: 0;
     left: 0;
     width: 36px;
-    bottom: -25%;
+    bottom: -50%;
   }
   .contact-us-section .contact-us-container .contact-us-text #contact-us-text-p-lg {
     display: none;
@@ -2571,6 +2550,9 @@ footer .main-footer-container .main-footer .footer-contact-follow .footer-follow
     bottom: -15px;
     left: 0;
   }
+  .for-restaurants-section .for-restaurants-intro .for-restaurants-intro-text h3 span {
+    font-size: 22px;
+  }
   .for-restaurants-section .for-restaurants-intro .for-restaurants-intro-text #for-restaurants-h3-desktop {
     display: none;
   }
@@ -2856,8 +2838,8 @@ footer .main-footer-container .main-footer .footer-contact-follow .footer-follow
   }
   .show-phone-section .three-phones #phone1 {
     height: 290.74px;
-    left: -19px;
-    top: -71px;
+    left: -38px;
+    top: -70px;
   }
   .show-phone-section .three-phones #phone2 {
     position: relative;
@@ -2866,8 +2848,8 @@ footer .main-footer-container .main-footer .footer-contact-follow .footer-follow
   }
   .show-phone-section .three-phones #phone3 {
     height: 290.74px;
-    left: 75px;
-    top: -71px;
+    left: 71px;
+    top: -79px;
   }
   .show-phone-section .three-phones #show-phone-dec {
     width: 44.82px;

@@ -129,7 +129,7 @@ header {
         height: 2px;
         width: 32px;
         background-color: $persimmon-color;
-        bottom: -10%;
+        bottom: -15px;
       }
 
       #span-world {
@@ -196,21 +196,20 @@ header {
       color: $martini-color;
     }
   }
-
+  & img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: -60px;
+  }
   .header-image {
     width: 55%;
-    & img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      margin-left: -60px;
-    }
   }
 }
 
 // Logos section
 .partners-logos-section {
-  margin-top: 25px;
+  margin-top: 116px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -231,7 +230,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 239px;
+  margin-top: 215px;
 
   .why-knowbie-intro-text {
     text-align: center;
@@ -324,7 +323,7 @@ header {
 .for-restaurants-section {
   display: flex;
   flex-direction: column;
-  margin-top: 346px;
+  margin-top: 243px;
 
   .for-restaurants-intro {
     display: flex;
@@ -380,14 +379,6 @@ header {
           bottom: -15px;
           left: 0;
         }
-      }
-
-      #for-restaurants-h3-desktop {
-        display: block;
-      }
-
-      #for-restaurants-h3-mobile {
-        display: none;
       }
 
       & span {
@@ -514,6 +505,10 @@ header {
       #second-dark-safari-1-mob {
         display: none;
       }
+
+      #second-dark-safari-1 {
+        height: 679px;
+      }
     }
 
     .for-restaurants-tools-right {
@@ -531,7 +526,9 @@ header {
       #second-dark-safari-2 {
         position: absolute;
         right: 0;
-        top: 50%;
+        top: 55%;
+
+        height: 679px;
       }
 
       #second-dark-safari-mob {
@@ -671,13 +668,6 @@ header {
       }
     }
 
-    #join-waitlist-p-desktop {
-      display: block;
-    }
-    #join-waitlist-p-mobile {
-      display: none;
-    }
-
     & p {
       margin: 0;
       font-weight: normal;
@@ -759,8 +749,8 @@ header {
     #show-phone-dec {
       position: absolute;
       z-index: 10001;
-      left: 375px;
-      bottom: -640px;
+      left: 335px;
+      bottom: -626px;
     }
   }
 }
@@ -954,7 +944,8 @@ header {
   margin-top: 150px;
   background-color: $white-lilac-bg-color;
   width: 100%;
-  padding: 140px 140px;
+  padding-top: 66px;
+  padding-bottom: 117px;
   display: flex;
   justify-content: center;
   position: relative;
@@ -972,26 +963,20 @@ header {
 
   .contact-us-container {
     width: 90%;
-    display: grid;
-    justify-items: center;
-    grid-template-columns: 1fr 2fr;
-    grid-auto-rows: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .contact-us-text {
-      #contact-us-text-h2-lg {
-        display: block;
-      }
-
-      #contact-us-text-h2-sm {
-        display: none;
-      }
+      text-align: center;
+      width: 40%;
 
       & h2 {
         font-weight: bold;
         font-size: 35px;
         line-height: 50px;
         color: $primary-text-color;
-        margin-bottom: 24px;
+        margin-bottom: 56px;
         position: relative;
 
         &::before {
@@ -1001,21 +986,15 @@ header {
           height: 2px;
           background: $pigeon-post-color;
           position: absolute;
-          bottom: -5px;
+          bottom: -30px;
           left: 0;
+          right: 0;
+          margin: auto;
         }
 
         & span {
           color: $pigeon-post-color;
         }
-      }
-
-      #contact-us-text-p-lg {
-        display: block;
-      }
-
-      #contact-us-text-p-sm {
-        display: none;
       }
 
       & p {
@@ -1023,76 +1002,12 @@ header {
         font-size: 20px;
         line-height: 150%;
         color: $secondary-text-color;
-        width: 348px;
+        margin-top: 0;
+        margin-bottom: 75px;
 
         & span {
           color: $pigeon-post-color;
-        }
-      }
-    }
-
-    .contact-us-info {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      height: 404px;
-      background-color: $white-bg-color;
-      padding-left: 35px;
-      box-shadow: 0px 14px 27px rgba(0, 0, 0, 0.07);
-      border-radius: 29.4045px;
-
-      & h3 {
-        font-weight: bold;
-        font-size: 34.9714px;
-        line-height: 41px;
-        letter-spacing: -1.5772px;
-        font-family: $secondary-font-family;
-        color: $primary-text-color;
-        margin-top: 0;
-      }
-
-      .contact-info-text {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-bottom: 30px;
-        width: 445px;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-
-        & p {
-          margin-left: 20px;
-          font-size: 17.0964px;
-          line-height: 22px;
-          letter-spacing: 1.12017px;
-          color: $spun-pearl-color;
-          margin-bottom: 0;
-          margin-top: 0;
-        }
-
-        #contact-us-time-img {
-          align-self: flex-start;
-        }
-
-        #contact-us-time {
-          & p {
-            text-align: center;
-            margin-top: 0;
-
-            &:last-child {
-              margin-top: 14px;
-            }
-
-            & span {
-              margin-left: 15px;
-              font-weight: normal;
-              font-size: 17.5849px;
-              line-height: 22px;
-              letter-spacing: -0.879245px;
-            }
-          }
+          cursor: pointer;
         }
       }
     }
@@ -1140,6 +1055,7 @@ header {
             padding: 15px 20px;
             color: $secondary-text-color;
             border-radius: 30.2446px;
+            font-family: $main-font-family;
 
             &::placeholder {
               color: #8c8496, 70%;
@@ -1149,8 +1065,9 @@ header {
           & select {
             background: rgba(234, 234, 246, 0.75);
             border-radius: 29.4045px;
-            font-size: 17px;
-            line-height: 21px;
+            font-weight: normal;
+            font-size: 17.4857px;
+            line-height: 22px;
             border: none;
             padding: 15px 20px;
             color: $secondary-text-color;
@@ -1159,7 +1076,8 @@ header {
             background-repeat: no-repeat;
             background-position-x: 95%;
             background-position-y: 50%;
-            color: rgba(140, 132, 150, 0.7);
+            color: rgba(140, 132, 150, 1);
+            font-family: $main-font-family;
           }
         }
 
@@ -1168,12 +1086,12 @@ header {
           height: 126.4px;
           background: rgba(234, 234, 246, 0.75);
           border-radius: 29.4045px;
-          font-weight: normal;
           font-size: 17.4857px;
           line-height: 22px;
           border: none;
           padding: 15px 20px;
           color: $secondary-text-color;
+          font-family: $main-font-family;
 
           &::placeholder {
             color: rgba(140, 132, 150, 0.7);
@@ -1184,14 +1102,14 @@ header {
           width: 202px;
           background-color: $pigeon-post-color;
           color: $white-bg-color;
-          font-size: 23.6571px;
+          font-size: 20px;
           line-height: 35px;
           letter-spacing: 0.003em;
           border: none;
           border-radius: 9999px;
           padding: 16px 0;
           cursor: pointer;
-          box-shadow: 0px 4px 15px rgba(177, 178, 221, 0.5);
+          filter: drop-shadow(0px 4px 15px rgba(177, 178, 221, 0.7));
         }
       }
 
@@ -1472,6 +1390,7 @@ footer {
           .footer-links {
             display: flex;
             flex-direction: row;
+            align-items: center;
             justify-content: space-between;
             margin-top: 25px;
           }

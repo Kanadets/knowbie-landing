@@ -20,12 +20,7 @@ const spanFormSubmit = document.getElementById("name-form-submit");
 const burgerMenu = document.getElementById("nav-links-burger-open");
 
 burgerMenu.addEventListener("click", () => {
-  burgerMenu.childNodes[1].classList.toggle("upper-burger-open");
-  burgerMenu.childNodes[3].classList.toggle("middle-burger-open");
-  burgerMenu.childNodes[5].classList.toggle("bottom-burger-open");
-  document
-    .getElementById("nav-links-control")
-    .classList.toggle("nav-links-open");
+  onLinkClick();
 });
 
 submitContactUsBtn.addEventListener("click", async () => {
@@ -70,6 +65,19 @@ const sendEmail = async (data, url) => {
 
 const openGoogleForms = () => {
   document.getElementById("iframe-control").classList.add("iframe-open");
+};
+
+const closeGoogleForms = () => {
+  document.getElementById("iframe-control").classList.remove("iframe-open");
+};
+
+const onLinkClick = () => {
+  burgerMenu.childNodes[1].classList.toggle("upper-burger-open");
+  burgerMenu.childNodes[3].classList.toggle("middle-burger-open");
+  burgerMenu.childNodes[5].classList.toggle("bottom-burger-open");
+  document
+    .getElementById("nav-links-control")
+    .classList.toggle("nav-links-open");
 };
 
 const backdropClick = () => {

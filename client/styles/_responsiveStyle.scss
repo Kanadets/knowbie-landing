@@ -341,8 +341,8 @@
 
       #phone1 {
         height: 650px;
-        left: -175px;
-        top: -45px;
+        left: -217px;
+        top: -52px;
       }
 
       #phone2 {
@@ -352,8 +352,8 @@
 
       #phone3 {
         height: 650px;
-        left: 25px;
-        top: -45px;
+        left: 16px;
+        top: -52px;
       }
 
       #show-phone-dec {
@@ -480,12 +480,13 @@
         }
 
         & h2 {
+          margin-bottom: 31px;
           &::before {
             margin: auto;
             right: 0;
             left: 0;
             width: 36px;
-            bottom: -25%;
+            bottom: -50%;
           }
         }
 
@@ -890,6 +891,10 @@
             bottom: -15px;
             left: 0;
           }
+
+          span {
+            font-size: 22px;
+          }
         }
 
         #for-restaurants-h3-desktop {
@@ -1178,8 +1183,8 @@
 
       #phone1 {
         height: 290.74px;
-        left: -19px;
-        top: -71px;
+        left: -38px;
+        top: -70px;
       }
 
       #phone2 {
@@ -1191,8 +1196,8 @@
 
       #phone3 {
         height: 290.74px;
-        left: 75px;
-        top: -71px;
+        left: 71px;
+        top: -79px;
       }
 
       #show-phone-dec {

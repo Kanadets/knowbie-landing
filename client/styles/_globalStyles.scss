@@ -14,6 +14,7 @@ body {
   background-color: $main-bg-color;
   overflow-x: hidden;
   overflow-y: hidden;
+  position: relative;
 
   .iframe-backdrop {
     overflow-x: hidden;
@@ -26,26 +27,79 @@ body {
     #background-overlay {
       background-color: rgba(0, 0, 0, 0.4);
       position: fixed;
+
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
+
       display: block;
       z-index: 99999;
     }
 
-    iframe {
+    .iframe-main-container {
       height: 80%;
+      width: 640px;
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
       margin: auto;
-      margin: auto;
       z-index: 999999;
       background-color: #fff;
       border-radius: 30px;
+
+      #close-iframe {
+        cursor: pointer;
+        z-index: 99999999;
+        display: flex;
+        height: 16px;
+        width: 20px;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #fff;
+        border-radius: 99999px;
+        padding: 5px;
+
+        #upper-span {
+          height: 2px;
+          width: 20px;
+          background-color: $primary-text-color;
+          transform: rotate(45deg);
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+        }
+
+        #bottom-span {
+          height: 2px;
+          width: 20px;
+          background-color: $primary-text-color;
+          transform: rotate(-45deg);
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+        }
+      }
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        height: 80%;
+      }
     }
   }
 
@@ -62,9 +116,13 @@ body {
       overflow-x: hidden;
       overflow-y: hidden;
       .iframe-backdrop {
-        iframe {
+        .iframe-main-container {
           height: 100%;
           width: 100%;
+          iframe {
+            height: 100%;
+            width: 100%;
+          }
         }
       }
     }

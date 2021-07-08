@@ -20,16 +20,23 @@
       data-aos="fade-down"
     >
       <div id="background-overlay" onclick="backdropClick()"></div>
-      <iframe
-        class="animate__animated animate__fadeInDown"
-        src="https://docs.google.com/forms/d/e/1FAIpQLSeVN0-wL8ZsdqnrKLQxP9ubNMp74faW4KX1eN9Y3YsZUqn2vQ/viewform?embedded=true"
-        width="640"
-        height="994"
-        frameborder="0"
-        marginheight="0"
-        marginwidth="0"
-        >Loading…</iframe
-      >
+      <div class="iframe-main-container">
+        <div id="close-iframe" onclick="closeGoogleForms()">
+          <span id="upper-span"></span>
+          <span id="bottom-span"></span>
+        </div>
+        <iframe
+          class="animate__animated animate__fadeInDown"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSeVN0-wL8ZsdqnrKLQxP9ubNMp74faW4KX1eN9Y3YsZUqn2vQ/viewform?embedded=true"
+          width="640"
+          height="994"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+        >
+          Loading…</iframe
+        >
+      </div>
     </div>
     <nav data-aos="fade-down">
       <a href="/"><img src="assets/main-logo.svg" height="55" width="205" /></a>
@@ -40,13 +47,21 @@
           <div class="burger-menu bottom-burger"></div>
         </div>
         <ul class="nav-links" id="nav-links-control">
-          <li class="nav-link nav-link-active"><a href="#home">Home</a></li>
+          <li class="nav-link" onclick="onLinkClick()">
+            <a href="#home">Home</a>
+          </li>
           <li class="nav-link">
             <a href="#for-restaurants">For Restaurants</a>
           </li>
-          <li class="nav-link"><a href="#for-servers">For Servers</a></li>
-          <li class="nav-link"><a href="#for-partners">For Partners</a></li>
-          <li class="nav-link"><a href="#contact-us">Contact Us</a></li>
+          <li class="nav-link" onclick="onLinkClick()">
+            <a href="#for-servers">For Servers</a>
+          </li>
+          <li class="nav-link" onclick="onLinkClick()">
+            <a href="#for-partners">For Partners</a>
+          </li>
+          <li class="nav-link" onclick="onLinkClick()">
+            <a href="#contact-us">Contact Us</a>
+          </li>
           <a href="#"
             ><button onclick="openGoogleForms()">Get early access</button></a
           >
@@ -189,12 +204,10 @@
         </div>
         <div class="for-restaurants-intro-text" data-aos="fade-left">
           <h2>FOR RESTAURANTS</h2>
-          <h3 id="for-restaurants-h3-desktop">
+          <h3>
             Knowbie trains staff to provide <span>next-level</span> service
           </h3>
-          <h3 id="for-restaurants-h3-mobile">
-            Every thing you need to grow your restaurant
-          </h3>
+
           <span>Built for hospitality, by hospitality</span>
           <ul>
             <li>
@@ -229,14 +242,14 @@
       <div class="for-restaurants-tools">
         <div class="for-restaurants-tools-left">
           <img
-            src="assets/SafariDark.svg"
+            src="assets/SafariDark.png"
             id="second-dark-safari-1"
             alt=""
             srcset=""
             data-aos="fade-right"
           />
           <img
-            src="assets/SafariDark-mob.png"
+            src="assets/SafariDark.png"
             id="second-dark-safari-1-mob"
             alt=""
             srcset=""
@@ -276,7 +289,7 @@
             data-aos="fade-left"
           />
           <img
-            src="assets/SafariDark-2-mob.png"
+            src="assets/SafariDark-2.png"
             id="second-dark-safari-mob"
             alt=""
             srcset=""
@@ -316,13 +329,9 @@
     <section class="join-waitlist-section">
       <div class="join-waitlist-div" data-aos="fade-in">
         <h3>Calling all <span>beta testers!</span></h3>
-        <p id="join-waitlist-p-desktop">
+        <p>
           Become a beta partner and help us change server training forever.
           Access is limited.
-        </p>
-        <p id="join-waitlist-p-mobile">
-          Join us as a beta partner and start setting a new standard. <br />
-          Our Beta access is limited.
         </p>
         <button data-aos="fade-in" onclick="openGoogleForms()">
           Get early access
@@ -360,7 +369,13 @@
           srcset=""
           data-aos="fade-left"
         />
-        <img src="assets/dec.svg" id="show-phone-dec" alt="" srcset="" />
+        <img
+          src="assets/dec.svg"
+          id="show-phone-dec"
+          alt=""
+          srcset=""
+          data-aos="fade-in"
+        />
       </div>
       <img
         src="assets/phone5.png"
@@ -424,29 +439,16 @@
     <section class="contact-us-section" id="contact-us">
       <div class="contact-us-container">
         <div class="contact-us-text" data-aos="fade-right">
-          <h2 id="contact-us-text-h2-lg">
-            Partner with <br />
-            <span id="contact-us-text-span">knowbie</span>
+          <h2>
+            Partner with Knowbie
           </h2>
-          <h2 id="contact-us-text-h2-sm">
-            Partner with us and
-            <span id="contact-us-text-span">get featured!</span>
-          </h2>
-          <p id="contact-us-text-p-lg">
+          <p>
             Interested in finding out how Knowbie can boost and simplify your
             business?
             <b
-              >Get in touch here.
-              <span>here</span>
+              >Get in touch
+              <span onclick="openGoogleForms()">here.</span>
             </b>
-          </p>
-          <p id="contact-us-text-p-sm">
-            Tell us a bit more about your business, and we’ll be in touch
-            shortly.
-            <b
-              >You want to become among the first to try knowbie? Sign up
-              <span>here</span></b
-            >
           </p>
         </div>
         <div class="contact-us-form-wrap" data-aos="fade-left">
@@ -471,9 +473,9 @@
               />
               <select name="companyType" id="companyTypeInputContact">
                 <option value="" disabled selected>Company Type</option>
-                <option value="Bar">Bar</option>
-                <option value="Restaurant">Restaurant</option>
-                <option value="Wine store">Wine store</option>
+                <option value="Winery">Winery</option>
+                <option value="Investors">Investors</option>
+                <option value="Media">Media</option>
               </select>
               <input
                 type="text"
@@ -504,12 +506,12 @@
             </div>
           </div>
         </div>
-        <div class="contact-us-info" data-aos="fade-right">
+        <!-- <div class="contact-us-info" data-aos="fade-right">
           <h3>Quick Contact</h3>
-          <!-- <div class="contact-info-text">
+          <div class="contact-info-text">
             <img src="assets/phone_num.svg" alt="" srcset="" />
             <p>+928607817</p>
-          </div> -->
+          </div>
           <div class="contact-info-text">
             <img src="assets/email.svg" alt="" srcset="" />
             <p>info@getknowbie.com</p>
@@ -526,10 +528,10 @@
               <p>Saturday - Sunday: <span>5:00 am - 9:00 pm</span></p>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
-    <footer data-aos="fade-up">
+    <footer>
       <div class="footer-get-started-main">
         <div class="footer-get-started-container">
           <div class="footer-get-started">
@@ -557,7 +559,7 @@
                   </h5>
                   <div>
                     <p>
-                      hosenalkrimi@gmail.com
+                      investors@getknowbie.com
                     </p>
                     <!-- <p>
                       +218928607817
@@ -570,7 +572,7 @@
                   </h5>
                   <div>
                     <p>
-                      hosenalkrimi@gmail.com
+                      media@getknowbie.com
                     </p>
                     <!-- <p>
                       +218928607817

@@ -587,6 +587,10 @@ header .header-image {
   height: 40%;
 }
 
+.for-restaurants-section .for-restaurants-intro .for-restaurants-intro-img img {
+  width: 879px;
+}
+
 .for-restaurants-section .for-restaurants-intro .for-restaurants-intro-text h2 {
   background: -webkit-gradient(linear, right top, left top, color-stop(2.16%, rgba(252, 238, 204, 0)), color-stop(36.3%, #fceecc), color-stop(61.91%, #fceecc), to(rgba(252, 238, 204, 0)));
   background: linear-gradient(270deg, rgba(252, 238, 204, 0) 2.16%, #fceecc 36.3%, #fceecc 61.91%, rgba(252, 238, 204, 0) 100%);

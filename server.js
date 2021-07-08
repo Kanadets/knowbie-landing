@@ -41,8 +41,6 @@ mongoose.connection.on("connected", (error, res) => {
   console.log("Mongoose is connected");
 });
 
-app.use(express.static(path.join(__dirname, "client"), options));
-
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "index.html"));
 });

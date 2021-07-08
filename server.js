@@ -4,6 +4,7 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const nodemailer = require("nodemailer");
 const mongoose = require("mongoose");
+const path = require("path");
 
 const Emails = require("./models/Emails");
 
@@ -40,8 +41,10 @@ mongoose.connection.on("connected", (error, res) => {
   console.log("Mongoose is connected");
 });
 
+app.use(express.static(path.join(__dirname, "client"), options));
+
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.sendFile(path.join(__dirname, "client", "index.html"));
 });
 
 app.post("/send-email", async (request, response) => {

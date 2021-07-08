@@ -1643,7 +1643,8 @@ footer .main-footer-container .main-footer .footer-contact-follow .contact-all-i
   line-height: 25px;
 }
 
-footer .main-footer-container .main-footer .footer-contact-follow .contact-all-info .footer-contact-us p {
+footer .main-footer-container .main-footer .footer-contact-follow .contact-all-info .footer-contact-us a {
+  text-decoration: none;
   font-weight: normal;
   font-size: 14.7972px;
   line-height: 25px;

@@ -98,7 +98,6 @@
   }
 
   header {
-    height: 60vh;
     width: 90%;
     justify-content: space-between;
 
@@ -123,13 +122,8 @@
       }
     }
 
-    .header-image {
-      & img {
-        width: 607px;
-        height: 438.04px;
-        display: block;
-        margin-right: -100px;
-      }
+    & img {
+      height: 400.04px;
     }
   }
 
@@ -703,6 +697,7 @@
     margin-top: 65px;
 
     .header-text {
+      width: 90%;
       text-align: center;
 
       & h1 {
@@ -749,8 +744,6 @@
     // .header-image {
     //   width: 100%;
     & img {
-      width: 482px;
-      height: 335.77px;
     }
     //}
   }

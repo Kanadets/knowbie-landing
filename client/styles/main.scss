@@ -91,11 +91,33 @@ nav {
           padding: 14px 27px;
           border: none;
           border-radius: 9999px;
-          transition: all 0.2s ease-in-out;
           box-shadow: 0px 2.70455px 10.142px rgba(130, 219, 109, 0.2);
+        }
+
+        & .nav-button-animation {
+          overflow: hidden;
+          color: $primary-text-color;
+          background-color: $persimmon-color;
 
           &:hover {
-            box-shadow: 0px 2.70455px 10.142px rgba(130, 219, 109, 0.4);
+            color: #fff;
+            background-color: #ff6a4d;
+          }
+
+          &::before {
+            position: absolute;
+            top: -4px;
+            content: "";
+            background: #c2f1b7;
+            width: 113%;
+            height: 110%;
+            left: -10%;
+            transform: skew(30deg);
+            transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+          }
+
+          &:hover::before {
+            transform: translate3d(100%, 0, 0);
           }
         }
       }
@@ -107,7 +129,7 @@ nav {
 header {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 85%;
   height: 100%;
   position: relative;
@@ -117,7 +139,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 100%;
+    width: 40%;
     height: 100%;
 
     & h1 {
@@ -192,7 +214,34 @@ header {
         transform: translate(0);
 
         &:hover {
-          box-shadow: 0px 4px 15px rgba(255, 106, 77, 0.4);
+          box-shadow: 0px 2.70455px 10.142px rgba(130, 219, 109, 0.2);
+        }
+      }
+
+      & .header-button-animation {
+        overflow: hidden;
+        color: #fff;
+        background-color: $mint-bg-color;
+
+        &:hover {
+          color: $primary-text-color;
+          background-color: $mint-bg-color;
+        }
+
+        &::before {
+          position: absolute;
+          top: 0;
+          content: "";
+          background: $persimmon-color;
+          width: 122%;
+          height: 102%;
+          left: -10%;
+          transform: skew(30deg);
+          transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+        }
+
+        &:hover::before {
+          transform: translate3d(100%, 0, 0);
         }
       }
     }
@@ -204,10 +253,6 @@ header {
     }
   }
   & img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-left: -60px;
   }
   .header-image {
     width: 55%;
@@ -393,7 +438,7 @@ header {
         }
       }
 
-      & span {
+      & #for-rest-span {
         color: $secondary-text-color;
         font-weight: 600;
         font-size: 20px;
@@ -467,7 +512,38 @@ header {
           transition: all 0.2s ease-in-out;
 
           &:hover {
-            box-shadow: 0px 4px 15px rgba(239, 172, 0, 0.4);
+            box-shadow: 0px 2.70455px 10.142px rgba(130, 219, 109, 0.4);
+          }
+        }
+
+        & .for-rest-button-animation {
+          overflow: hidden;
+          color: #fff;
+          background-color: $mint-bg-color;
+
+          .btn-span {
+            color: #fff;
+          }
+
+          &:hover {
+            color: $primary-text-color;
+            background-color: $mint-bg-color;
+          }
+
+          &::before {
+            position: absolute;
+            top: 0;
+            content: "";
+            background: $web-orange-color;
+            width: 122%;
+            height: 102%;
+            left: -10%;
+            transform: skew(30deg);
+            transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+          }
+
+          &:hover::before {
+            transform: translate3d(100%, 0, 0);
           }
         }
       }
@@ -700,6 +776,33 @@ header {
       border-radius: 9999px;
       padding: 20px 37px;
       cursor: pointer;
+    }
+
+    & .join-button-animation {
+      overflow: hidden;
+      color: $primary-text-color;
+      background-color: $persimmon-color;
+
+      &:hover {
+        color: #fff;
+        background-color: #ff6a4d;
+      }
+
+      &::before {
+        position: absolute;
+        top: -4px;
+        content: "";
+        background: #c2f1b7;
+        width: 113%;
+        height: 110%;
+        left: -10%;
+        transform: skew(30deg);
+        transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+      }
+
+      &:hover::before {
+        transform: translate3d(100%, 0, 0);
+      }
     }
 
     & img {
@@ -1017,7 +1120,8 @@ header {
         margin-top: 0;
         margin-bottom: 75px;
 
-        & span {
+        & a {
+          text-decoration: none;
           color: $pigeon-post-color;
           cursor: pointer;
         }
@@ -1121,7 +1225,37 @@ header {
           border-radius: 9999px;
           padding: 16px 0;
           cursor: pointer;
-          filter: drop-shadow(0px 4px 15px rgba(177, 178, 221, 0.7));
+        }
+
+        & .contact-button-animation {
+          overflow: hidden;
+          color: #fff;
+          background-color: $mint-bg-color;
+
+          .btn-span {
+            color: #fff;
+          }
+
+          &:hover {
+            color: $primary-text-color;
+            background-color: $mint-bg-color;
+          }
+
+          &::before {
+            position: absolute;
+            top: 0;
+            content: "";
+            background: $pigeon-post-color;
+            width: 122%;
+            height: 102%;
+            left: -10%;
+            transform: skew(30deg);
+            transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+          }
+
+          &:hover::before {
+            transform: translate3d(100%, 0, 0);
+          }
         }
       }
 
@@ -1330,6 +1464,33 @@ footer {
           border-radius: 9999px;
           padding: 12px 42px;
           cursor: pointer;
+        }
+
+        & .footer-button-animation {
+          overflow: hidden;
+          color: $primary-text-color;
+          background-color: $mint-bg-color;
+
+          &:hover {
+            color: $primary-text-color;
+            background-color: $mint-bg-color;
+          }
+
+          &::before {
+            position: absolute;
+            top: 0;
+            content: "";
+            background: #fff;
+            width: 122%;
+            height: 102%;
+            left: -10%;
+            transform: skew(30deg);
+            transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+          }
+
+          &:hover::before {
+            transform: translate3d(100%, 0, 0);
+          }
         }
       }
     }

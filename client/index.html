@@ -65,7 +65,9 @@
             <a href="#contact-us">Contact Us</a>
           </li>
           <a href="#"
-            ><button onclick="openGoogleForms()">Get early access</button></a
+            ><button class="nav-button-animation" onclick="openGoogleForms()">
+              <span class="btn-span">Get early access</span>
+            </button></a
           >
         </ul>
       </div>
@@ -85,8 +87,12 @@
           </p>
         </div>
         <div class="header-email">
-          <button id="header_button" onclick="openGoogleForms()">
-            Get early access
+          <button
+            id="header_button"
+            class="header-button-animation"
+            onclick="openGoogleForms()"
+          >
+            <span class="btn-span">Get early access</span>
           </button>
         </div>
       </div>
@@ -96,7 +102,6 @@
         alt=""
         srcset=""
         height="589"
-        width="849"
         data-aos="fade-left"
       />
       <!-- </div> -->
@@ -210,7 +215,7 @@
             Knowbie trains staff to provide <span>next-level</span> service
           </h3>
 
-          <span>Built for hospitality, by hospitality</span>
+          <span id="for-rest-span">Built for hospitality, by hospitality</span>
           <ul>
             <li>
               <b>Play to learn:</b> Knowbie’s game-and-quiz system provides
@@ -236,7 +241,12 @@
             id="for-restaurants-intro-email-anim"
           >
             <div id="for-res-form">
-              <button onclick="openGoogleForms()">Get early access</button>
+              <button
+                onclick="openGoogleForms()"
+                class="for-rest-button-animation"
+              >
+                <span>Get early access</span>
+              </button>
             </div>
           </div>
         </div>
@@ -335,8 +345,12 @@
           Become a beta partner and help us change server training forever.
           Access is limited.
         </p>
-        <button data-aos="fade-in" onclick="openGoogleForms()">
-          Get early access
+        <button
+          class="join-button-animation"
+          data-aos="fade-in"
+          onclick="openGoogleForms()"
+        >
+          <span>Get early access</span>
         </button>
         <img src="assets/dec.svg" alt="" srcset="" data-aos="fade-in" />
       </div>
@@ -449,7 +463,7 @@
             business?
             <b
               >Get in touch
-              <span onclick="openGoogleForms()">here.</span>
+              <a href="mailto: info@getknowbie.com">here.</a>
             </b>
           </p>
         </div>
@@ -475,6 +489,7 @@
               />
               <select name="companyType" id="companyTypeInputContact">
                 <option value="" disabled selected>Company Type</option>
+                <option value="Restaurant">Restaurant</option>
                 <option value="Winery">Winery</option>
                 <option value="Investors">Investors</option>
                 <option value="Media">Media</option>
@@ -492,7 +507,9 @@
               placeholder="Message"
               id="messageInputContact"
             ></textarea>
-            <button id="submit-contact-us-btn">Send</button>
+            <button id="submit-contact-us-btn" class="contact-button-animation">
+              <span>Send</span>
+            </button>
           </div>
           <div class="init-contact-us-form-submit" id="anim-contact-us-submit">
             <h4>
@@ -544,7 +561,9 @@
             <h4 id="footer-get-started-mobile">
               Start your journey with knowbie now!
             </h4>
-            <button onclick="openGoogleForms()">Sign me up</button>
+            <button onclick="openGoogleForms()" class="footer-button-animation">
+              <span>Sign me up</span>
+            </button>
           </div>
         </div>
         <div class="main-footer-container">
@@ -600,9 +619,21 @@
                   Follow Us
                 </h5>
                 <div class="footer-links">
-                  <a><img src="assets/fbVec.svg" /></a>
-                  <a><img src="assets/insta.svg" /></a>
-                  <a><img src="assets/twitter.svg" /></a>
+                  <a href="" target="_blank" rel="noreferrer noopener"
+                    ><img src="assets/fbVec.svg"
+                  /></a>
+                  <a
+                    href="https://www.instagram.com/getknowbie/"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    ><img src="assets/insta.svg"
+                  /></a>
+                  <a
+                    href="https://twitter.com/getknowbie"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    ><img src="assets/twitter.svg"
+                  /></a>
                 </div>
               </div>
             </div>

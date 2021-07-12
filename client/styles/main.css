@@ -440,7 +440,7 @@ header .header-text .header-email button {
   border: none;
   border-radius: 9999px;
   cursor: pointer;
-  padding: 21px 40px;
+  padding: 15px 40px;
   -webkit-box-shadow: 0px 4px 15px rgba(255, 106, 77, 0.2);
           box-shadow: 0px 4px 15px rgba(255, 106, 77, 0.2);
   -webkit-transition: all 0.2s ease-in-out;
@@ -669,7 +669,7 @@ header .header-image {
   line-height: 60px;
   letter-spacing: 2.57143px;
   margin-bottom: 27px;
-  text-align: center;
+  max-width: 550px;
 }
 
 .for-restaurants-section .for-restaurants-intro .for-restaurants-intro-text h3 {
@@ -700,9 +700,9 @@ header .header-image {
   left: 0;
 }
 
-.for-restaurants-section .for-restaurants-intro .for-restaurants-intro-text #for-rest-span {
+.for-restaurants-section .for-restaurants-intro .for-restaurants-intro-text #for-rest-p {
   color: #8c8496;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 20px;
   line-height: 25px;
 }
@@ -711,7 +711,7 @@ header .header-image {
   margin-top: 30px;
   margin-left: 0;
   list-style: none;
-  padding-left: 20px;
+  padding-left: 5px;
   width: 80%;
 }
 
@@ -720,12 +720,12 @@ header .header-image {
   font-weight: 200;
   font-size: 20px;
   line-height: 150%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .for-restaurants-section .for-restaurants-intro .for-restaurants-intro-text ul li b {
   color: #2e1a47;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .for-restaurants-section .for-restaurants-intro .for-restaurants-intro-text ul li::before {
@@ -777,7 +777,7 @@ header .header-image {
 
 .for-restaurants-section .for-restaurants-intro .for-restaurants-intro-text .for-restaurants-intro-email button {
   background-color: #efac00;
-  padding: 20px 36px;
+  padding: 15px 36px;
   color: #ffffff;
   font-family: "Karla", sans-serif;
   font-weight: bold;
@@ -959,7 +959,7 @@ header .header-image {
   color: #82db6d;
   background: -webkit-gradient(linear, right top, left top, color-stop(2.16%, rgba(230, 252, 225, 0)), color-stop(36.3%, #e6fce1), color-stop(61.91%, #e6fce1), to(rgba(230, 252, 225, 0)));
   background: linear-gradient(270deg, rgba(230, 252, 225, 0) 2.16%, #e6fce1 36.3%, #e6fce1 61.91%, rgba(230, 252, 225, 0) 100%);
-  text-align: center;
+  max-width: 409px;
   font-weight: bold;
   font-size: 48px;
   line-height: 60px;
@@ -1003,7 +1003,7 @@ header .header-image {
   margin-top: 55px;
   margin-left: 0;
   list-style: none;
-  padding-left: 20px;
+  padding-left: 5px;
   width: 80%;
 }
 
@@ -1012,7 +1012,7 @@ header .header-image {
   font-weight: normal;
   font-size: 20px;
   line-height: 150%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-weight: 200;
 }
 
@@ -1079,7 +1079,7 @@ header .header-image {
   font-family: "Karla", sans-serif;
   border: none;
   border-radius: 9999px;
-  padding: 20px 37px;
+  padding: 15px 32px;
   cursor: pointer;
 }
 
@@ -1408,7 +1408,7 @@ header .header-image {
   letter-spacing: 0.003em;
   border: none;
   border-radius: 9999px;
-  padding: 16px 0;
+  padding: 12px 0;
   cursor: pointer;
 }
 
@@ -1726,7 +1726,7 @@ footer .footer-get-started-main .footer-get-started-container .footer-get-starte
   color: #2e1a47;
   border: none;
   border-radius: 9999px;
-  padding: 12px 42px;
+  padding: 12px 35px;
   cursor: pointer;
 }
 

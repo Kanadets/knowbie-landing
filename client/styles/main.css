@@ -1911,6 +1911,11 @@ footer .main-footer-container .main-footer .footer-contact-follow .footer-follow
   margin-top: 25px;
 }
 
+footer .main-footer-container .main-footer .footer-contact-follow .footer-follow-us img {
+  width: 27px;
+  height: 27px;
+}
+
 footer .main-footer-container .main-footer .footer-contact-follow .footer-follow-us h5 {
   font-weight: bold;
   font-size: 18.1285px;

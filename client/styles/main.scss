@@ -98,6 +98,7 @@ nav {
           overflow: hidden;
           color: $primary-text-color;
           background-color: $persimmon-color;
+          -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
 
           &:hover {
             color: #fff;
@@ -222,6 +223,7 @@ header {
         overflow: hidden;
         color: #fff;
         background-color: $mint-bg-color;
+        -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
 
         &:hover {
           color: $primary-text-color;
@@ -252,8 +254,7 @@ header {
       color: $martini-color;
     }
   }
-  & img {
-  }
+
   .header-image {
     width: 55%;
   }
@@ -451,6 +452,7 @@ header {
         list-style: none;
         padding-left: 5px;
         width: 80%;
+        margin-bottom: 0;
 
         & li {
           color: $secondary-text-color;
@@ -463,6 +465,10 @@ header {
             color: $primary-text-color;
             font-weight: 300;
           }
+        }
+
+        & li:last-child {
+          margin-bottom: 0;
         }
 
         & li::before {
@@ -520,6 +526,7 @@ header {
           overflow: hidden;
           color: #fff;
           background-color: $mint-bg-color;
+          -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
 
           .btn-span {
             color: #fff;
@@ -699,6 +706,7 @@ header {
       list-style: none;
       padding-left: 5px;
       width: 80%;
+      margin-bottom: 0;
 
       & li {
         color: $secondary-text-color;
@@ -712,6 +720,10 @@ header {
           color: $primary-text-color;
           font-weight: 400;
         }
+      }
+
+      & li:last-child {
+        margin-bottom: 0;
       }
 
       & li::before {
@@ -765,6 +777,7 @@ header {
     }
 
     & button {
+      display: inline-block;
       margin-top: 63px;
       background-color: $mint-bg-color;
       color: $primary-text-color;
@@ -782,6 +795,7 @@ header {
       overflow: hidden;
       color: $primary-text-color;
       background-color: $persimmon-color;
+      -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
 
       &:hover {
         color: #fff;
@@ -790,12 +804,13 @@ header {
 
       &::before {
         position: absolute;
-        top: -4px;
+        top: 0;
         content: "";
         background: #c2f1b7;
-        width: 113%;
-        height: 110%;
+        width: 122%;
+        height: 102%;
         left: -10%;
+        border-radius: 9999px;
         transform: skew(30deg);
         transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
       }
@@ -1231,6 +1246,7 @@ header {
           overflow: hidden;
           color: #fff;
           background-color: $mint-bg-color;
+          -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
 
           .btn-span {
             color: #fff;
@@ -1470,6 +1486,7 @@ footer {
           overflow: hidden;
           color: $primary-text-color;
           background-color: $mint-bg-color;
+          -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
 
           &:hover {
             color: $primary-text-color;
@@ -1481,6 +1498,7 @@ footer {
             top: 0;
             content: "";
             background: #fff;
+            border-radius: 9999px;
             width: 122%;
             height: 102%;
             left: -10%;
@@ -1519,6 +1537,7 @@ footer {
           margin-top: 60px;
           font-size: 12px;
           font-weight: 300;
+          text-align: center;
         }
       }
 
@@ -1533,6 +1552,7 @@ footer {
           flex-direction: row;
           justify-content: space-around;
           width: 70%;
+
           .footer-contact-us {
             display: flex;
             flex-direction: column;

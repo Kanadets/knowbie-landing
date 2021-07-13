@@ -565,7 +565,7 @@
 
     .main-footer-container {
       .main-footer {
-        width: 95%;
+        width: 100%;
         flex-direction: column-reverse;
 
         .footer-knowbie-logo {
@@ -578,11 +578,13 @@
           width: 100%;
 
           .contact-all-info {
-            width: 90%;
+            width: 75%;
           }
 
           .footer-follow-us {
-            margin-left: 30px;
+            width: 22%;
+            margin-left: 0px;
+            justify-content: space-around;
           }
         }
       }

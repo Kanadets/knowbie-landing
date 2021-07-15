@@ -3,9 +3,11 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  background-color: $main-bg-color;
 }
 
 button {
+  font-family: $main-font-family;
   position: relative;
   //display: inline-block;
 
@@ -30,7 +32,7 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: $main-font-family;
-  background-color: $main-bg-color;
+
   overflow-x: hidden;
   overflow-y: hidden;
   position: relative;

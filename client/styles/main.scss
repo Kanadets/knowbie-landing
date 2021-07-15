@@ -80,12 +80,11 @@ nav {
       a {
         text-decoration: none;
         button {
-          font-family: $secondary-font-family;
+          font-family: $main-font-family;
           cursor: pointer;
           background-color: $mint-bg-color;
           color: $primary-text-color;
-          font-style: normal;
-          font-weight: bold;
+          font-weight: 700;
           font-size: 13.5227px;
           line-height: 16px;
           padding: 14px 27px;
@@ -131,6 +130,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  max-width: 1440px;
   width: 85%;
   height: 100%;
   position: relative;
@@ -192,18 +192,16 @@ header {
         width: 55%;
 
         &::placeholder {
-          font-family: $secondary-font-family;
           color: $oslo-gray-color;
           font-size: 18px;
         }
       }
 
       & button {
-        font-family: $secondary-font-family;
         background-color: $persimmon-color;
         color: $white-bg-color;
         font-style: normal;
-        font-weight: bold;
+        font-weight: 700;
         font-size: 20px;
         line-height: 23px;
         border: none;
@@ -262,6 +260,7 @@ header {
 
 // Logos section
 .partners-logos-section {
+  max-width: 1440px;
   margin-top: 116px;
   width: 100%;
   display: flex;
@@ -420,6 +419,7 @@ header {
         margin-bottom: 26px;
         position: relative;
         display: inline-block;
+        width: 80%;
 
         & span {
           color: $web-orange-color;
@@ -497,16 +497,14 @@ header {
           width: 50%;
 
           &::placeholder {
-            font-family: $secondary-font-family;
             color: $oslo-gray-color;
           }
         }
 
         & button {
           background-color: $web-orange-color;
-          padding: 15px 36px;
+          padding: 15px 40px;
           color: $white-bg-color;
-          font-family: $secondary-font-family;
           font-weight: bold;
           font-size: 20px;
           line-height: 23px;
@@ -567,7 +565,7 @@ header {
     .for-restaurants-tools-left {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      // justify-content: space-between;
 
       & h2 {
         width: 35%;
@@ -576,19 +574,11 @@ header {
         font-size: 40px;
         line-height: 150%;
         z-index: 10;
-        margin-top: 0;
+        margin: 0 auto;
 
         & span {
           color: $web-orange-color;
         }
-      }
-
-      #for-restaurants-h2-desktop {
-        display: block;
-      }
-
-      #for-restaurants-h2-mobile {
-        display: none;
       }
 
       #dec-for-restaurants {
@@ -784,10 +774,10 @@ header {
       font-weight: bold;
       font-size: 20px;
       line-height: 23px;
-      font-family: $secondary-font-family;
+
       border: none;
       border-radius: 9999px;
-      padding: 15px 32px;
+      padding: 15px 40px;
       cursor: pointer;
     }
 
@@ -804,11 +794,11 @@ header {
 
       &::before {
         position: absolute;
-        top: 0;
+        top: -2px;
         content: "";
         background: #c2f1b7;
         width: 122%;
-        height: 102%;
+        height: 104%;
         left: -10%;
         border-radius: 9999px;
         transform: skew(30deg);
@@ -1225,7 +1215,7 @@ header {
           font-family: $main-font-family;
 
           &::placeholder {
-            color: rgba(140, 132, 150, 0.7);
+            color: #8c8496, 70%;
           }
         }
 
@@ -1233,12 +1223,13 @@ header {
           width: 202px;
           background-color: $pigeon-post-color;
           color: $white-bg-color;
+          font-weight: bold;
           font-size: 20px;
           line-height: 35px;
           letter-spacing: 0.003em;
           border: none;
           border-radius: 9999px;
-          padding: 12px 0;
+          padding: 15px 0;
           cursor: pointer;
         }
 
@@ -1478,7 +1469,7 @@ footer {
           color: $primary-text-color;
           border: none;
           border-radius: 9999px;
-          padding: 12px 35px;
+          padding: 12px 40px;
           cursor: pointer;
         }
 
@@ -1534,7 +1525,7 @@ footer {
 
         & span {
           color: $primary-text-color;
-          margin-top: 60px;
+          margin-top: 30px;
           font-size: 12px;
           font-weight: 300;
           text-align: center;
@@ -1562,6 +1553,8 @@ footer {
               font-weight: bold;
               font-size: 18.1285px;
               line-height: 25px;
+              margin-bottom: 0;
+              margin-top: 23.275px;
             }
 
             & a {
@@ -1599,6 +1592,8 @@ footer {
             font-weight: bold;
             font-size: 18.1285px;
             line-height: 25px;
+            margin-bottom: 0;
+            margin-top: 23.275px;
           }
         }
       }

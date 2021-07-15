@@ -200,6 +200,10 @@
           }
         }
 
+        & #for-rest-p {
+          text-align: center;
+        }
+
         .for-restaurants-intro-email {
           display: flex;
           justify-content: center;
@@ -513,7 +517,6 @@
           font-size: 34px;
           line-height: 40px;
           letter-spacing: -1.53339px;
-          font-family: $secondary-font-family;
           color: $primary-text-color;
           margin-top: 0;
         }

@@ -908,9 +908,9 @@ header .header-image {
 
 .for-restaurants-section .for-restaurants-tools .for-restaurants-tools-right #second-dark-safari-2 {
   position: absolute;
-  right: 0;
+  right: 2%;
   top: 55%;
-  height: 679px;
+  width: 953px;
 }
 
 .for-restaurants-section .for-restaurants-tools .for-restaurants-tools-right #second-dark-safari-mob {
@@ -2882,8 +2882,7 @@ footer .main-footer-container .main-footer .footer-contact-follow .footer-follow
   }
   .for-restaurants-section .for-restaurants-tools .for-restaurants-tools-left #second-dark-safari-1-mob {
     display: block;
-    width: 318.96px;
-    height: 213.16px;
+    width: 341.96px;
   }
   .for-restaurants-section .for-restaurants-tools .for-restaurants-tools-right {
     display: -webkit-box;
@@ -3256,7 +3255,7 @@ footer .main-footer-container .main-footer .footer-contact-follow .footer-follow
   }
   footer .footer-get-started-main .footer-get-started-container .footer-get-started button {
     font-weight: bold;
-    font-size: 11.1054px;
+    font-size: 15.7857px;
     line-height: 19px;
     padding: 8px 31px;
   }

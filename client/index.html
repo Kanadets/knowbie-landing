@@ -26,6 +26,7 @@
     <div
       class="iframe-backdrop animate__animated animate__fadeInDown"
       id="iframe-control"
+      data-aos="fade-down"
     >
       <div id="background-overlay" onclick="backdropClick()"></div>
       <div class="iframe-main-container">
@@ -46,7 +47,7 @@
         >
       </div>
     </div>
-    <nav>
+    <nav data-aos="fade-down">
       <a href="/"><img src="assets/main-logo.svg" height="55" width="205" /></a>
       <div class="nav-links-button">
         <div class="nav-links-burger" id="nav-links-burger-open">
@@ -80,7 +81,7 @@
         </ul>
       </div>
     </nav>
-    <header id="home">
+    <header id="home" data-aos="fade-right">
       <div class="header-text">
         <div>
           <h1>
@@ -105,7 +106,13 @@
         </div>
       </div>
       <!-- <div class="header-image" > -->
-      <img src="assets/Group1785.png" alt="" srcset="" height="589" />
+      <img
+        src="assets/Group1785.png"
+        alt=""
+        srcset=""
+        height="589"
+        data-aos="fade-left"
+      />
       <!-- </div> -->
     </header>
     <section class="partners-logos-section">
@@ -119,6 +126,7 @@
       <div
         class="why-knowbie-intro-text"
         data-aos-anchor-placement="top-bottom"
+        data-aos="fade-in"
       >
         <h2>WHY KNOWBIE</h2>
         <p id="intro-text">
@@ -134,7 +142,7 @@
         </p>
       </div>
       <div class="why-knowbie-cards">
-        <div class="why-knowbie-card-container">
+        <div class="why-knowbie-card-container" data-aos="fade-in">
           <div class="why-knowbie-card">
             <img src="assets/green-why.svg" alt="" srcset="" />
             <div>
@@ -146,7 +154,7 @@
             </div>
           </div>
         </div>
-        <div class="why-knowbie-card-container">
+        <div class="why-knowbie-card-container" data-aos="fade-in">
           <div class="why-knowbie-card">
             <img src="assets/red-why.svg" alt="" srcset="" />
             <div>
@@ -158,7 +166,7 @@
             </div>
           </div>
         </div>
-        <div class="why-knowbie-card-container">
+        <div class="why-knowbie-card-container" data-aos="fade-in">
           <div class="why-knowbie-card">
             <img src="assets/yellow-clock-why.svg" alt="" srcset="" />
             <div>
@@ -170,7 +178,7 @@
             </div>
           </div>
         </div>
-        <div class="why-knowbie-card-container">
+        <div class="why-knowbie-card-container" data-aos="fade-in">
           <div class="why-knowbie-card">
             <img src="assets/yellow-check-mark.svg" alt="" srcset="" />
             <div>
@@ -182,7 +190,7 @@
             </div>
           </div>
         </div>
-        <div class="why-knowbie-card-container">
+        <div class="why-knowbie-card-container" data-aos="fade-in">
           <div class="why-knowbie-card">
             <img src="assets/purple-settings-why.svg" alt="" srcset="" />
             <div>
@@ -194,7 +202,7 @@
             </div>
           </div>
         </div>
-        <div class="why-knowbie-card-container">
+        <div class="why-knowbie-card-container" data-aos="fade-in">
           <div class="why-knowbie-card">
             <img src="assets/ltv-why.svg" alt="" srcset="" />
             <div>
@@ -212,9 +220,14 @@
     <section class="for-restaurants-section" id="for-restaurants">
       <div class="for-restaurants-intro">
         <div class="for-restaurants-intro-img">
-          <img src="assets/Artwork.png" alt="" srcset="" />
+          <img
+            src="assets/Artwork.png"
+            alt=""
+            srcset=""
+            data-aos="fade-right"
+          />
         </div>
-        <div class="for-restaurants-intro-text">
+        <div class="for-restaurants-intro-text" data-aos="fade-left">
           <h2>FOR RESTAURANTS</h2>
           <h3>
             Knowbie trains staff to provide <span>next-level</span> service
@@ -263,14 +276,16 @@
             id="second-dark-safari-1"
             alt=""
             srcset=""
+            data-aos="fade-right"
           />
           <img
             src="assets/SafariDark.png"
             id="second-dark-safari-1-mob"
             alt=""
             srcset=""
+            data-aos="fade-right"
           />
-          <h2>
+          <h2 data-aos="fade-left">
             Knowbie is a simple yet powerful <span>app</span> that maximizes
             in-house training.
           </h2>
@@ -281,6 +296,7 @@
             srcset=""
             width="105"
             height="107"
+            data-aos="fade-right"
           />
         </div>
         <div class="for-restaurants-tools-right">
@@ -289,12 +305,14 @@
             id="dec-for-restaurants-tools"
             alt=""
             srcset=""
+            data-aos="fade-left"
           />
           <img
             src="assets/SafariDark-2.png"
             id="second-dark-safari-2"
             alt=""
             srcset=""
+            data-aos="fade-left"
           />
           <img
             src="assets/SafariDark-2.png"
@@ -306,7 +324,7 @@
       </div>
     </section>
     <section class="for-servers-section" id="for-servers">
-      <div class="for-servers-text">
+      <div class="for-servers-text" data-aos="fade-right">
         <h2>FOR SERVERS</h2>
         <h3>Because we know it’s <span>important</span> to you.</h3>
         <span id="for-servers-span"
@@ -329,32 +347,72 @@
           </li>
         </ul>
       </div>
-      <div class="for-servers-img">
+      <div class="for-servers-img" data-aos="fade-left">
         <img src="assets/for-servers.png" alt="" srcset="" />
       </div>
     </section>
     <section class="join-waitlist-section">
-      <div class="join-waitlist-div">
+      <div class="join-waitlist-div" data-aos="fade-in">
         <h3>Calling all <span>beta testers!</span></h3>
         <p>
           Become a beta partner and help us change server training forever.
           Access is limited.
         </p>
-        <button class="join-button-animation" onclick="openGoogleForms()">
+        <button
+          class="join-button-animation"
+          onclick="openGoogleForms()"
+          data-aos="fade-in"
+        >
           <span>Get early access</span>
         </button>
-        <img src="assets/dec.svg" alt="" srcset="" />
+        <img src="assets/dec.svg" alt="" srcset="" data-aos="fade-in" />
       </div>
     </section>
     <section class="show-phone-section">
-      <img src="assets/phone1.png" id="left-phone" alt="" srcset="" />
+      <img
+        src="assets/phone1.png"
+        id="left-phone"
+        alt=""
+        srcset=""
+        data-aos="fade-right"
+      />
       <div class="three-phones">
-        <img src="assets/phone2.png" id="phone1" alt="" srcset="" />
-        <img src="assets/phone3.png" id="phone2" alt="" srcset="" />
-        <img src="assets/phone4.png" id="phone3" alt="" srcset="" />
-        <img src="assets/dec.svg" id="show-phone-dec" alt="" srcset="" />
+        <img
+          src="assets/phone2.png"
+          id="phone1"
+          alt=""
+          srcset=""
+          data-aos="fade-right"
+        />
+        <img
+          src="assets/phone3.png"
+          id="phone2"
+          alt=""
+          srcset=""
+          data-aos="fade-in"
+        />
+        <img
+          src="assets/phone4.png"
+          id="phone3"
+          alt=""
+          srcset=""
+          data-aos="fade-left"
+        />
+        <img
+          src="assets/dec.svg"
+          id="show-phone-dec"
+          alt=""
+          srcset=""
+          data-aos="fade-in"
+        />
       </div>
-      <img src="assets/phone5.png" id="right-phone" alt="" srcset="" />
+      <img
+        src="assets/phone5.png"
+        id="right-phone"
+        alt=""
+        srcset=""
+        data-aos="fade-left"
+      />
     </section>
     <!-- <section class="why-knowbie-clients-reviews" id="for partners">
       <div class="why-knowbie-clients-text">
@@ -409,7 +467,7 @@
     </section> -->
     <section class="contact-us-section" id="contact-us">
       <div class="contact-us-container">
-        <div class="contact-us-text">
+        <div class="contact-us-text" data-aos="fade-in">
           <h2>
             Partner with Knowbie
           </h2>
@@ -422,7 +480,7 @@
             </b>
           </p>
         </div>
-        <div class="contact-us-form-wrap">
+        <div class="contact-us-form-wrap" data-aos="fade-in">
           <div class="contact-us-form-container" id="anim-contact-us-container">
             <h3>
               Contact

@@ -431,7 +431,7 @@ header .header-text .header-email button {
   color: #ffffff;
   font-style: normal;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 23px;
   border: none;
   border-radius: 9999px;
@@ -780,7 +780,7 @@ header .header-image {
   padding: 15px 40px;
   color: #ffffff;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 23px;
   border: none;
   cursor: pointer;
@@ -1069,7 +1069,7 @@ header .header-image {
   background-color: #c2f1b7;
   color: #2e1a47;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 23px;
   border: none;
   border-radius: 9999px;
@@ -1400,7 +1400,7 @@ header .header-image {
   background-color: #b1b2dd;
   color: #ffffff;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 35px;
   letter-spacing: 0.003em;
   border: none;
@@ -1718,7 +1718,7 @@ footer .footer-get-started-main .footer-get-started-container .footer-get-starte
 footer .footer-get-started-main .footer-get-started-container .footer-get-started button {
   background-color: #ffffff;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 35px;
   text-align: center;
   color: #2e1a47;

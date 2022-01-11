@@ -27,19 +27,19 @@ let smtpTransport = nodemailer.createTransport({
   },
 });
 
-// mongoose.connect(process.env.DB_URL, {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-//   useCreateIndex: true,
-// });
+mongoose.connect(process.env.DB_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+});
 
-// mongoose.connection.on("error", (error) => {
-//   console.log("Failed to connect to DB: ", error);
-// });
+mongoose.connection.on("error", (error) => {
+  console.log("Failed to connect to DB: ", error);
+});
 
-// mongoose.connection.on("connected", (error, res) => {
-//   console.log("Mongoose is connected");
-// });
+mongoose.connection.on("connected", (error, res) => {
+  console.log("Mongoose is connected");
+});
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "index.html"));

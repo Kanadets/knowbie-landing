@@ -27,22 +27,30 @@ let smtpTransport = nodemailer.createTransport({
   },
 });
 
-mongoose.connect(process.env.DB_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-});
+// mongoose.connect(process.env.DB_URL, {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+//   useCreateIndex: true,
+// });
 
-mongoose.connection.on("error", (error) => {
-  console.log("Failed to connect to DB: ", error);
-});
+// mongoose.connection.on("error", (error) => {
+//   console.log("Failed to connect to DB: ", error);
+// });
 
-mongoose.connection.on("connected", (error, res) => {
-  console.log("Mongoose is connected");
-});
+// mongoose.connection.on("connected", (error, res) => {
+//   console.log("Mongoose is connected");
+// });
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "index.html"));
+});
+
+app.get("/terms/servers", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/terms", "servers.html"));
+});
+
+app.get("/privacypolicy/servers", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/privacypolicy", "servers.html"));
 });
 
 app.post("/send-email", async (request, response) => {
@@ -114,6 +122,6 @@ app.post("/send-form-email", async (request, response) => {
   }
 });
 
-app.listen(process.env.PORT || 5000, () =>
-  console.log(`Server listening on port ${process.env.PORT || 5000}`)
+app.listen(process.env.PORT || 5006, () =>
+  console.log(`Server listening on port ${process.env.PORT || 5006}`)
 );
